@@ -56,23 +56,23 @@ import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ActivityLog extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = "NetGuard.Log";
+//public class ActivityLog extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+   // private static final String TAG = "NetGuard.Log";
 
-    private boolean running = false;
-    private ListView lvLog;
-    private AdapterLog adapter;
-    private MenuItem menuSearch = null;
+  //  private boolean running = false;
+  //  private ListView lvLog;
+   // private AdapterLog adapter;
+  //  private MenuItem menuSearch = null;
 
-    private boolean live;
-    private boolean resolve;
-    private boolean organization;
-    private InetAddress vpn4 = null;
-    private InetAddress vpn6 = null;
+   // private boolean live;
+   // private boolean resolve;
+   // private boolean organization;
+  //  private InetAddress vpn4 = null;
+   // private InetAddress vpn6 = null;
 
-    private static final int REQUEST_PCAP = 1;
+   // private static final int REQUEST_PCAP = 1;
 
-    private DatabaseHelper.LogChangedListener listener = new DatabaseHelper.LogChangedListener() {
+  /*  private DatabaseHelper.LogChangedListener listener = new DatabaseHelper.LogChangedListener() {
         @Override
         public void onChanged() {
             runOnUiThread(new Runnable() {
@@ -82,76 +82,77 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                 }
             });
         }
-    };
+    };*/
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        Util.setTheme(this);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.logging);
-        running = true;
+   // @Override
+   // protected void onCreate(Bundle savedInstanceState) {
+      //  Util.setTheme(this);
+     //   super.onCreate(savedInstanceState);
+       // setContentView(R.layout.logging);
+      //  running = true;
 
         // Action bar
-        View actionView = getLayoutInflater().inflate(R.layout.actionlog, null, false);
-        SwitchCompat swEnabled = (SwitchCompat) actionView.findViewById(R.id.swEnabled);
+        //View actionView = getLayoutInflater().inflate(R.layout.actionlog, null, false);
+     //   SwitchCompat swEnabled = (SwitchCompat) actionView.findViewById(R.id.swEnabled);
 
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(actionView);
-
-        getSupportActionBar().setTitle(R.string.menu_log);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+     //   getSupportActionBar().setDisplayShowCustomEnabled(true);
+     //   getSupportActionBar().setCustomView(actionView);
+//
+      //  getSupportActionBar().setTitle(R.string.menu_log);
+     /////   getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Get settings
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        resolve = prefs.getBoolean("resolve", false);
-        organization = prefs.getBoolean("organization", false);
-        boolean log = prefs.getBoolean("log", false);
+      //  final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+      //  resolve = prefs.getBoolean("resolve", false);
+      //  organization = prefs.getBoolean("organization", false);
+       // boolean log = prefs.getBoolean("log", false);
 
         // Show disabled message
-        TextView tvDisabled = (TextView) findViewById(R.id.tvDisabled);
-        tvDisabled.setVisibility(log ? View.GONE : View.VISIBLE);
+       // TextView tvDisabled = (TextView) findViewById(R.id.tvDisabled);
+       // tvDisabled.setVisibility(log ? View.GONE : View.VISIBLE);
 
         // Set enabled switch
-        swEnabled.setChecked(log);
-        swEnabled.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+    //    swEnabled.setChecked(log);
+      /*  swEnabled.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 prefs.edit().putBoolean("log", isChecked).apply();
             }
-        });
+        });*/
 
         // Listen for preference changes
-        prefs.registerOnSharedPreferenceChangeListener(this);
+     //   prefs.registerOnSharedPreferenceChangeListener(this);
 
-        lvLog = (ListView) findViewById(R.id.lvLog);
+       // lvLog = (ListView) findViewById(R.id.lvLog);
 
-        boolean udp = prefs.getBoolean("proto_udp", true);
-        boolean tcp = prefs.getBoolean("proto_tcp", true);
-        boolean other = prefs.getBoolean("proto_other", true);
-        boolean allowed = prefs.getBoolean("traffic_allowed", true);
-        boolean blocked = prefs.getBoolean("traffic_blocked", true);
+      //  boolean udp = prefs.getBoolean("proto_udp", true);
+       // boolean tcp = prefs.getBoolean("proto_tcp", true);
+       // boolean other = prefs.getBoolean("proto_other", true);
+       // boolean allowed = prefs.getBoolean("traffic_allowed", true);
+       // boolean blocked = prefs.getBoolean("traffic_blocked", true);
 
-        adapter = new AdapterLog(this, DatabaseHelper.getInstance(this).getLog(udp, tcp, other, allowed, blocked), resolve, organization);
+      /*  adapter = new AdapterLog(this, DatabaseHelper.getInstance(this).getLog(udp, tcp, other, allowed, blocked), resolve, organization);
         adapter.setFilterQueryProvider(new FilterQueryProvider() {
             public Cursor runQuery(CharSequence constraint) {
                 return DatabaseHelper.getInstance(ActivityLog.this).searchLog(constraint.toString());
             }
-        });
+        }
+    );*/
 
-        lvLog.setAdapter(adapter);
+    //    lvLog.setAdapter(adapter);
 
-        try {
+      /*  try {
             vpn4 = InetAddress.getByName(prefs.getString("vpn4", "10.1.10.1"));
             vpn6 = InetAddress.getByName(prefs.getString("vpn6", "fd00:1:fd00:1:fd00:1:fd00:1"));
         } catch (UnknownHostException ex) {
             Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-        }
+        }*/
 
-        lvLog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                PackageManager pm = getPackageManager();
-                Cursor cursor = (Cursor) adapter.getItem(position);
-                long time = cursor.getLong(cursor.getColumnIndex("time"));
+       // lvLog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       //     @Override
+          //  public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //PackageManager pm = getPackageManager();
+            //    Cursor cursor = (Cursor) adapter.getItem(position);
+             /*   long time = cursor.getLong(cursor.getColumnIndex("time"));
                 int version = cursor.getInt(cursor.getColumnIndex("version"));
                 int protocol = cursor.getInt(cursor.getColumnIndex("protocol"));
                 final String saddr = cursor.getString(cursor.getColumnIndex("saddr"));
@@ -161,16 +162,16 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                 final String dname = cursor.getString(cursor.getColumnIndex("dname"));
                 final int uid = (cursor.isNull(cursor.getColumnIndex("uid")) ? -1 : cursor.getInt(cursor.getColumnIndex("uid")));
                 int allowed = (cursor.isNull(cursor.getColumnIndex("allowed")) ? -1 : cursor.getInt(cursor.getColumnIndex("allowed")));
-
+*/
                 // Get external address
-                InetAddress addr = null;
-                try {
+               // InetAddress addr = null;
+               /* try {
                     addr = InetAddress.getByName(daddr);
                 } catch (UnknownHostException ex) {
                     Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-                }
+                }*/
 
-                String ip;
+            /*    String ip;
                 int port;
                 if (addr.equals(vpn4) || addr.equals(vpn6)) {
                     ip = saddr;
@@ -179,53 +180,53 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                     ip = daddr;
                     port = dport;
                 }
-
+*/
                 // Build popup menu
-                PopupMenu popup = new PopupMenu(ActivityLog.this, findViewById(R.id.vwPopupAnchor));
-                popup.inflate(R.menu.log);
+         /*       PopupMenu popup = new PopupMenu(ActivityLog.this, findViewById(R.id.vwPopupAnchor));
+                popup.inflate(R.menu.log);*/
 
                 // Application name
-                if (uid >= 0)
+             /*   if (uid >= 0)
                     popup.getMenu().findItem(R.id.menu_application).setTitle(TextUtils.join(", ", Util.getApplicationNames(uid, ActivityLog.this)));
                 else
-                    popup.getMenu().removeItem(R.id.menu_application);
+                    popup.getMenu().removeItem(R.id.menu_application);*/
 
                 // Destination IP
-                popup.getMenu().findItem(R.id.menu_protocol).setTitle(Util.getProtocolName(protocol, version, false));
+              //  popup.getMenu().findItem(R.id.menu_protocol).setTitle(Util.getProtocolName(protocol, version, false));
 
                 // Whois
-                final Intent lookupIP = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tcpiputils.com/whois-lookup/" + ip));
-                if (pm.resolveActivity(lookupIP, 0) == null)
+              //  final Intent lookupIP = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tcpiputils.com/whois-lookup/" + ip));
+              /*  if (pm.resolveActivity(lookupIP, 0) == null)
                     popup.getMenu().removeItem(R.id.menu_whois);
                 else
-                    popup.getMenu().findItem(R.id.menu_whois).setTitle(getString(R.string.title_log_whois, ip));
+                    popup.getMenu().findItem(R.id.menu_whois).setTitle(getString(R.string.title_log_whois, ip));*/
 
                 // Lookup port
-                final Intent lookupPort = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.speedguide.net/port.php?port=" + port));
-                if (port <= 0 || pm.resolveActivity(lookupPort, 0) == null)
+                /*final Intent lookupPort = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.speedguide.net/port.php?port=" + port));*/
+               /* if (port <= 0 || pm.resolveActivity(lookupPort, 0) == null)
                     popup.getMenu().removeItem(R.id.menu_port);
                 else
-                    popup.getMenu().findItem(R.id.menu_port).setTitle(getString(R.string.title_log_port, dport));
+                    popup.getMenu().findItem(R.id.menu_port).setTitle(getString(R.string.title_log_port, dport));*/
 
-                if (!prefs.getBoolean("filter", false)) {
+            /*    if (!prefs.getBoolean("filter", false)) {
                     popup.getMenu().removeItem(R.id.menu_allow);
                     popup.getMenu().removeItem(R.id.menu_block);
-                }
+                }*/
 
-                final Packet packet = new Packet();
-                packet.version = version;
+             //   final Packet packet = new Packet();
+               /* packet.version = version;
                 packet.protocol = protocol;
                 packet.daddr = daddr;
                 packet.dport = dport;
                 packet.time = time;
                 packet.uid = uid;
-                packet.allowed = (allowed > 0);
+                packet.allowed = (allowed > 0);*/
 
                 // Time
-                popup.getMenu().findItem(R.id.menu_time).setTitle(SimpleDateFormat.getDateTimeInstance().format(time));
+               // popup.getMenu().findItem(R.id.menu_time).setTitle(SimpleDateFormat.getDateTimeInstance().format(time));
 
                 // Handle click
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+          /*      popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
@@ -236,7 +237,7 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                                 return true;
                             }
 
-                            case R.id.menu_whois:
+                           case R.id.menu_whois:
                                 startActivity(lookupIP);
                                 return true;
 
@@ -244,7 +245,7 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                                 startActivity(lookupPort);
                                 return true;
 
-                           /* case R.id.menu_allow:
+                            case R.id.menu_allow:
                                 if (IAB.isPurchased(ActivityPro.SKU_FILTER, ActivityLog.this)) {
                                     DatabaseHelper.getInstance(ActivityLog.this).updateAccess(packet, dname, 0);
                                     ServiceSinkhole.reload("allow host", ActivityLog.this);
@@ -253,9 +254,9 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                                     startActivity(main);
                                 } else
                                     startActivity(new Intent(ActivityLog.this, ActivityPro.class));
-                                return true;*/
+                                return true;
 
-                         /*   case R.id.menu_block:
+                            case R.id.menu_block:
                                 if (IAB.isPurchased(ActivityPro.SKU_FILTER, ActivityLog.this)) {
                                     DatabaseHelper.getInstance(ActivityLog.this).updateAccess(packet, dname, 1);
                                     ServiceSinkhole.reload("block host", ActivityLog.this);
@@ -264,7 +265,7 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                                     startActivity(main);
                                 } else
                                     startActivity(new Intent(ActivityLog.this, ActivityPro.class));
-                                return true;*/
+                                return true;
 
                             default:
                                 return false;
@@ -278,32 +279,32 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
         });
 
         live = true;
-    }
+    }*/
 
-    @Override
+  /*  @Override
     protected void onResume() {
         super.onResume();
         if (live) {
             DatabaseHelper.getInstance(this).addLogChangedListener(listener);
             updateAdapter();
         }
-    }
+    }*/
 
-    @Override
+   /* @Override
     protected void onPause() {
         super.onPause();
         if (live)
             DatabaseHelper.getInstance(this).removeLogChangedListener(listener);
-    }
+    }*/
 
-    @Override
+  /*  @Override
     protected void onDestroy() {
         running = false;
         PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
         super.onDestroy();
     }
-
-    @Override
+*/
+  /*  @Override
     public void onSharedPreferenceChanged(SharedPreferences prefs, String name) {
         Log.i(TAG, "Preference " + name + "=" + prefs.getAll().get(name));
         if ("log".equals(name)) {
@@ -330,9 +331,9 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
 
         menuSearch = menu.findItem(R.id.menu_search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuSearch);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+       searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
+           public boolean onQueryTextSubmit(String query) {
                 if (adapter != null)
                     adapter.getFilter().filter(query);
                 return true;
@@ -355,9 +356,9 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
         });
 
         return true;
-    }
+    }*/
 
-    @Override
+  /*  @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -381,9 +382,9 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
         menu.findItem(R.id.menu_pcap_export).setEnabled(pcap_file.exists() && export);
 
         return super.onPrepareOptionsMenu(menu);
-    }
+    }*/
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         final File pcap_file = new File(getCacheDir(), "netguard.pcap");
@@ -438,14 +439,14 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                 updateAdapter();
                 return true;
 
-            case R.id.menu_log_resolve:
+           case R.id.menu_log_resolve:
                 item.setChecked(!item.isChecked());
                 prefs.edit().putBoolean("resolve", item.isChecked()).apply();
                 adapter.setResolve(item.isChecked());
                 adapter.notifyDataSetChanged();
                 return true;
 
-            case R.id.menu_log_organization:
+           case R.id.menu_log_organization:
                 item.setChecked(!item.isChecked());
                 prefs.edit().putBoolean("organization", item.isChecked()).apply();
                 adapter.setOrganization(item.isChecked());
@@ -499,7 +500,7 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
         }
     }
 
-    private void updateAdapter() {
+   private void updateAdapter() {
         if (adapter != null) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
             boolean udp = prefs.getBoolean("proto_udp", true);
@@ -513,9 +514,9 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                 adapter.getFilter().filter(searchView.getQuery().toString());
             }
         }
-    }
+    }*/
 
-    private Intent getIntentPCAPDocument() {
+   /* private Intent getIntentPCAPDocument() {
         Intent intent;
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
             if (Util.isPackageInstalled("org.openintents.filemanager", this)) {
@@ -532,8 +533,8 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
         }
         return intent;
     }
-
-    @Override
+*/
+ /*   @Override
     protected void onActivityResult(int requestCode, int resultCode, final Intent data) {
         Log.i(TAG, "onActivityResult request=" + requestCode + " result=" + requestCode + " ok=" + (resultCode == RESULT_OK));
 
@@ -545,9 +546,9 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
             Log.w(TAG, "Unknown activity result request=" + requestCode);
             super.onActivityResult(requestCode, resultCode, data);
         }
-    }
+    }*/
 
-    private void handleExportPCAP(final Intent data) {
+  /*  private void handleExportPCAP(final Intent data) {
         new AsyncTask<Object, Object, Throwable>() {
             @Override
             protected Throwable doInBackground(Object... objects) {
@@ -610,4 +611,4 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
             }
         }.execute();
     }
-}
+}*/

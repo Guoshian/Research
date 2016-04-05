@@ -46,6 +46,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 
+/*
 public class AdapterLog extends CursorAdapter {
     private static String TAG = "NetGuard.Log";
 
@@ -118,12 +119,14 @@ public class AdapterLog extends CursorAdapter {
     public void setOrganization(boolean organization) {
         this.organization = organization;
     }
-
-    @Override
+*/
+   /* @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return LayoutInflater.from(context).inflate(R.layout.log, parent, false);
-    }
+    }*/
 
+
+/*
     @Override
     public void bindView(final View view, final Context context, final Cursor cursor) {
         // Get values
@@ -360,3 +363,4 @@ public class AdapterLog extends CursorAdapter {
         }
     }
 }
+*/
