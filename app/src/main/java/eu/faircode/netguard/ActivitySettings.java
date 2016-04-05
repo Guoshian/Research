@@ -449,7 +449,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
     @TargetApi(Build.VERSION_CODES.M)
     public void onSharedPreferenceChanged(SharedPreferences prefs, String name) {
         // Pro features
-        if ("theme".equals(name)) {
+       /* if ("theme".equals(name)) {
             if (!"teal".equals(prefs.getString(name, "teal")) && !IAB.isPurchased(ActivityPro.SKU_THEME, this)) {
                 prefs.edit().putString(name, "teal").apply();
                 ((ListPreference) getPreferenceScreen().findPreference(name)).setValue("teal");
@@ -463,7 +463,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 startActivity(new Intent(this, ActivityPro.class));
                 return;
             }
-        }
+        }*/
 
         Object value = prefs.getAll().get(name);
         if (value instanceof String && "".equals(value))
@@ -1263,7 +1263,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                     else {
                         if (current == application) {
                             // Pro features
-                            if ("log".equals(key)) {
+                         /*   if ("log".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_LOG, context))
                                     return;
                             } else if ("theme".equals(key)) {
@@ -1272,7 +1272,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                             } else if ("show_stats".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_SPEED, context))
                                     return;
-                            }
+                            }*/
 
                             if ("hosts_last_import".equals(key) || "hosts_last_download".equals(key))
                                 return;

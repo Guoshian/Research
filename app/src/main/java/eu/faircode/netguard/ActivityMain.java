@@ -333,22 +333,22 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             iab = new IAB(new IAB.Delegate() {
                 @Override
                 public void onReady(IAB iab) {
-                    try {
+                  /*  try {
                         iab.updatePurchases();
 
-                        if (!IAB.isPurchased(ActivityPro.SKU_LOG, ActivityMain.this))
-                            prefs.edit().putBoolean("log", false).apply();
-                        if (!IAB.isPurchased(ActivityPro.SKU_THEME, ActivityMain.this)) {
-                            if (!"teal".equals(prefs.getString("theme", "teal")))
-                                prefs.edit().putString("theme", "teal").apply();
-                        }
-                        if (!IAB.isPurchased(ActivityPro.SKU_SPEED, ActivityMain.this))
+                      //  if (!IAB.isPurchased(ActivityPro.SKU_LOG, ActivityMain.this))
+                       //     prefs.edit().putBoolean("log", false).apply();
+                     //   if (!IAB.isPurchased(ActivityPro.SKU_THEME, ActivityMain.this)) {
+                     //       if (!"teal".equals(prefs.getString("theme", "teal")))
+                       //         prefs.edit().putString("theme", "teal").apply();
+                       // }
+                      //  if (!IAB.isPurchased(ActivityPro.SKU_SPEED, ActivityMain.this))
                             prefs.edit().putBoolean("show_stats", false).apply();
                     } catch (Throwable ex) {
                         Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
                     } finally {
                         iab.unbind();
-                    }
+                    }*/
                 }
             }, this);
             iab.bind();
@@ -802,12 +802,12 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 prefs.edit().putString("sort", "data").apply();
                 return true;
 
-            case R.id.menu_log:
+           /* case R.id.menu_log:
                 if (IAB.isPurchased(ActivityPro.SKU_LOG, this))
                     startActivity(new Intent(this, ActivityLog.class));
                 else
                     startActivity(new Intent(this, ActivityPro.class));
-                return true;
+                return true;*/
 
             case R.id.menu_settings:
                 startActivity(new Intent(this, ActivitySettings.class));

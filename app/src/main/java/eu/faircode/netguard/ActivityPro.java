@@ -43,63 +43,63 @@ import java.util.regex.Pattern;
 public class ActivityPro extends AppCompatActivity {
     private static final String TAG = "NetGuard.Pro";
 
-    private IAB iab;
+   // private IAB iab;
 
     // adb shell pm clear com.android.vending
     // android.test.purchased
-    public static final String SKU_LOG = "log";
+  /*  public static final String SKU_LOG = "log";
     public static final String SKU_FILTER = "filter";
     public static final String SKU_NOTIFY = "notify";
     public static final String SKU_SPEED = "speed";
     public static final String SKU_THEME = "theme";
     public static final String SKU_PRO1 = "pro1";
     public static final String SKU_DONATION = "donation";
+*/
+   // @Override
+   // protected void onCreate(Bundle savedInstanceState) {
+      //  Log.i(TAG, "Create");
+       // Util.setTheme(this);
+     //   super.onCreate(savedInstanceState);
+       //setContentView(R.layout.pro);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        Log.i(TAG, "Create");
-        Util.setTheme(this);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.pro);
+       // getSupportActionBar().setTitle(R.string.title_pro);
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getSupportActionBar().setTitle(R.string.title_pro);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+    //    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         // Initial state
-        updateState();
+       // updateState();
 
-        TextView tvLogTitle = (TextView) findViewById(R.id.tvLogTitle);
+       /* TextView tvLogTitle = (TextView) findViewById(R.id.tvLogTitle);
         TextView tvFilterTitle = (TextView) findViewById(R.id.tvFilterTitle);
         TextView tvNotifyTitle = (TextView) findViewById(R.id.tvNotifyTitle);
         TextView tvSpeedTitle = (TextView) findViewById(R.id.tvSpeedTitle);
         TextView tvThemeTitle = (TextView) findViewById(R.id.tvThemeTitle);
-        TextView tvAllTitle = (TextView) findViewById(R.id.tvAllTitle);
+        TextView tvAllTitle = (TextView) findViewById(R.id.tvAllTitle);*/
 
-        Linkify.TransformFilter filter = new Linkify.TransformFilter() {
-            @Override
+      //  Linkify.TransformFilter filter = new Linkify.TransformFilter() {
+        /*    @Override
             public String transformUrl(Matcher match, String url) {
                 return "";
             }
-        };
+        };*/
 
-        Linkify.addLinks(tvLogTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_LOG, null, filter);
+      /*  Linkify.addLinks(tvLogTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_LOG, null, filter);
         Linkify.addLinks(tvFilterTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_FILTER, null, filter);
         Linkify.addLinks(tvNotifyTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_NOTIFY, null, filter);
         Linkify.addLinks(tvSpeedTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_SPEED, null, filter);
         Linkify.addLinks(tvThemeTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_THEME, null, filter);
-        Linkify.addLinks(tvAllTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_PRO1, null, filter);
+        Linkify.addLinks(tvAllTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_PRO1, null, filter);*/
 
         // Challenge
-        TextView tvChallenge = (TextView) findViewById(R.id.tvChallenge);
-        tvChallenge.setText(Build.SERIAL);
+       // TextView tvChallenge = (TextView) findViewById(R.id.tvChallenge);
+        //tvChallenge.setText(Build.SERIAL);
 
         // Response
-        try {
+       /* try {
             final String response = Util.md5(Build.SERIAL, "NetGuard");
-            EditText etResponse = (EditText) findViewById(R.id.etResponse);
-            etResponse.addTextChangedListener(new TextWatcher() {
+          //  EditText etResponse = (EditText) findViewById(R.id.etResponse);
+         //   etResponse.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                     // Do nothing
@@ -120,8 +120,8 @@ public class ActivityPro extends AppCompatActivity {
             });
         } catch (Throwable ex) {
             Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-        }
-
+        }*/
+/*
         try {
             iab = new IAB(new IAB.Delegate() {
                 @Override
@@ -129,16 +129,16 @@ public class ActivityPro extends AppCompatActivity {
                     Log.i(TAG, "IAB ready");
                     try {
                         iab.updatePurchases();
-                        updateState();
-
+                        updateState();*/
+/*
                         final Button btnLog = (Button) findViewById(R.id.btnLog);
                         final Button btnFilter = (Button) findViewById(R.id.btnFilter);
                         final Button btnNotify = (Button) findViewById(R.id.btnNotify);
                         final Button btnSpeed = (Button) findViewById(R.id.btnSpeed);
                         final Button btnTheme = (Button) findViewById(R.id.btnTheme);
                         final Button btnAll = (Button) findViewById(R.id.btnAll);
-
-                        View.OnClickListener listener = new View.OnClickListener() {
+*/
+                      /*  View.OnClickListener listener = new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 try {
@@ -163,8 +163,8 @@ public class ActivityPro extends AppCompatActivity {
                                     Util.sendCrashReport(ex, ActivityPro.this);
                                 }
                             }
-                        };
-
+                        };*/
+/*
                         btnLog.setOnClickListener(listener);
                         btnFilter.setOnClickListener(listener);
                         btnNotify.setOnClickListener(listener);
@@ -188,8 +188,8 @@ public class ActivityPro extends AppCompatActivity {
         } catch (Throwable ex) {
             Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
         }
-    }
-
+    }*/
+/*
     @Override
     protected void onDestroy() {
         Log.i(TAG, "Destroy");
@@ -273,5 +273,5 @@ public class ActivityPro extends AppCompatActivity {
         llChallenge.setVisibility(
                 IAB.isPurchased(SKU_DONATION, this) || Util.isPlayStoreInstall(this)
                         ? View.GONE : View.VISIBLE);
-    }
+    }*/
 }

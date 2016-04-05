@@ -48,10 +48,10 @@ public class Receiver extends BroadcastReceiver {
             // Application added
             if (!intent.getBooleanExtra(Intent.EXTRA_REPLACING, false)) {
                 // Show notification
-                if (IAB.isPurchased(ActivityPro.SKU_NOTIFY, context)) {
+              /*  if (IAB.isPurchased(ActivityPro.SKU_NOTIFY, context)) {
                     int uid = intent.getIntExtra(Intent.EXTRA_UID, -1);
                     notifyNewApplication(uid, context);
-                }
+                }*/
             }
 
         } else if (Intent.ACTION_PACKAGE_REMOVED.equals(intent.getAction())) {
