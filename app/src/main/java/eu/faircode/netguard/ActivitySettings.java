@@ -552,7 +552,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             Intent ruleset = new Intent(ActivityMain.ACTION_RULES_CHANGED);
             LocalBroadcastManager.getInstance(this).sendBroadcast(ruleset);
 
-        } else if ("filter".equals(name)) {
+        }
+        /*else if ("filter".equals(name)) {
             ServiceSinkhole.reload("changed " + name, this);
 
             // Show dialog
@@ -578,7 +579,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 dialogFilter.show();
             }
 
-        } else if ("use_hosts".equals(name))
+        } */
+        else if ("use_hosts".equals(name))
             ServiceSinkhole.reload("changed " + name, this);
 
         else if ("vpn4".equals(name)) {
