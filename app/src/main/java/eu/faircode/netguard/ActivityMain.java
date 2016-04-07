@@ -315,7 +315,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                                 finish();
                         }
                     })
-                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    .setOnDismissListener(qnew DialogInterface.OnDismissListener() {
                         @Override
                         public void onDismiss(DialogInterface dialogInterface) {
                             dialogFirst = null;
