@@ -29,6 +29,7 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 
+/*
 public class AdapterDns extends CursorAdapter {
     private static String TAG = "NetGuard.DNS";
 
@@ -76,3 +77,4 @@ public class AdapterDns extends CursorAdapter {
         tvTTL.setText(Integer.toString(ttl));
     }
 }
+*/
