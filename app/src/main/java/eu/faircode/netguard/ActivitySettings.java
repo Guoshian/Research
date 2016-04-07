@@ -204,6 +204,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         });
 
         // Handle port forwarding
+
+       /*
         Preference pref_forwarding = screen.findPreference("forwarding");
         pref_forwarding.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
@@ -212,6 +214,9 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 return true;
             }
         });
+
+        */
+
 
         // VPN parameters
         screen.findPreference("vpn4").setTitle(getString(R.string.setting_vpn4, prefs.getString("vpn4", "10.1.10.1")));
@@ -228,7 +233,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         // Handle stats
         EditTextPreference pref_stats_frequency = (EditTextPreference) screen.findPreference("stats_frequency");
         EditTextPreference pref_stats_samples = (EditTextPreference) screen.findPreference("stats_samples");
-        pref_stats_frequency.setTitle(getString(R.string.setting_stats_frequency, prefs.getString("stats_frequency", "1000")));
+       // pref_stats_frequency.setTitle(getString(R.string.setting_stats_frequency, prefs.getString("stats_frequency", "1000")));
         pref_stats_samples.setTitle(getString(R.string.setting_stats_samples, prefs.getString("stats_samples", "90")));
 
         // Handle export
@@ -262,7 +267,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         if (Util.isPlayStoreInstall(this)) {
             cat_options.removePreference(screen.findPreference("update_check"));
             cat_advanced.removePreference(pref_block_domains);
-            cat_advanced.removePreference(pref_forwarding);
+            //cat_advanced.removePreference(pref_forwarding);
             cat_backup.removePreference(pref_hosts_import);
             cat_backup.removePreference(pref_hosts_url);
             cat_backup.removePreference(pref_hosts_download);
@@ -641,8 +646,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         } else if ("show_stats".equals(name))
             ServiceSinkhole.reloadStats("changed " + name, this);
 
-        else if ("stats_frequency".equals(name))
-            getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_stats_frequency, prefs.getString(name, "1000")));
+      //  else if ("stats_frequency".equals(name))
+        //    getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_stats_frequency, prefs.getString(name, "1000")));
 
         else if ("stats_samples".equals(name))
             getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_stats_samples, prefs.getString(name, "90")));

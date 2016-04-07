@@ -41,7 +41,7 @@ import android.widget.Toast;
 
 import java.net.InetAddress;
 import java.util.List;
-
+/*
 public class ActivityForwarding extends AppCompatActivity {
     private static final String TAG = "NetGuard.forwarding";
 
@@ -249,3 +249,4 @@ public class ActivityForwarding extends AppCompatActivity {
         }
     }
 }
+*/

@@ -30,6 +30,9 @@ import android.widget.TextView;
 
 import java.net.InetAddress;
 
+
+
+/*
 public class ActivityForwardApproval extends Activity {
     private static final String TAG = "NetGuard.Forward";
     private static final String ACTION_START_PORT_FORWARD = "eu.faircode.netguard.START_PORT_FORWARD";
@@ -93,12 +96,14 @@ am start -a eu.faircode.netguard.START_PORT_FORWARD \
 --ei ruid 9999 \
 --user 0
 */
-                    Log.i(TAG, "Start forwarding protocol " + protocol + " port " + dport + " to " + raddr + "/" + rport + " uid " + ruid);
+ /*                   Log.i(TAG, "Start forwarding protocol " + protocol + " port " + dport + " to " + raddr + "/" + rport + " uid " + ruid);
                     DatabaseHelper dh = DatabaseHelper.getInstance(ActivityForwardApproval.this);
                     dh.deleteForward(protocol, dport);
                     dh.addForward(protocol, dport, raddr, rport, ruid);
 
-                } else if (ACTION_STOP_PORT_FORWARD.equals(getIntent().getAction())) {
+                } else if (ACTION_STOP_PORT_FORWARD.equals(getIntent().getAction())) {*/
+
+
 /*
 am start -a eu.faircode.netguard.STOP_PORT_FORWARD \
 -n eu.faircode.netguard/eu.faircode.netguard.ActivityForwardApproval \
@@ -106,7 +111,7 @@ am start -a eu.faircode.netguard.STOP_PORT_FORWARD \
 --ei dport 53 \
 --user 0
 */
-                    Log.i(TAG, "Stop forwarding protocol " + protocol + " port " + dport);
+/*                    Log.i(TAG, "Stop forwarding protocol " + protocol + " port " + dport);
                     DatabaseHelper.getInstance(ActivityForwardApproval.this).deleteForward(protocol, dport);
                 }
 
@@ -124,3 +129,4 @@ am start -a eu.faircode.netguard.STOP_PORT_FORWARD \
         });
     }
 }
+*/
