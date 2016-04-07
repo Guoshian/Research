@@ -22,7 +22,7 @@ package eu.faircode.netguard;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
-
+/*
 public class ActivityDns extends AppCompatActivity {
     private static final String TAG = "NetGuard.DNS";
 
@@ -44,3 +44,4 @@ public class ActivityDns extends AppCompatActivity {
         super.onDestroy();
     }
 }
+*/

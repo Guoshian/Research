@@ -351,7 +351,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             prefs.edit().remove("loglevel").apply();
         } else if (!Util.isDebuggable(this))
             cat_development.removePreference(pref_show_resolved);
-
+/*
         // Show resolved
         pref_show_resolved.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
@@ -359,7 +359,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 startActivity(new Intent(ActivitySettings.this, ActivityDns.class));
                 return true;
             }
-        });
+        });*/
 
         // Handle technical info
         Preference.OnPreferenceClickListener listener = new Preference.OnPreferenceClickListener() {
