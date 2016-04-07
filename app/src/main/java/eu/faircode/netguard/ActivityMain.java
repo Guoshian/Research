@@ -293,13 +293,13 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         if (!initialized) {
             // Create view
             LayoutInflater inflater = LayoutInflater.from(this);
-            View view = inflater.inflate(R.layout.first, null, false);
-            TextView tvFirst = (TextView) view.findViewById(R.id.tvFirst);
-            tvFirst.setMovementMethod(LinkMovementMethod.getInstance());
+           // View view = inflater.inflate(R.layout.first, null, false);
+           // TextView tvFirst = (TextView) view.findViewById(R.id.tvFirst);
+          //  tvFirst.setMovementMethod(LinkMovementMethod.getInstance());
 
             // Show dialog
             dialogFirst = new AlertDialog.Builder(this)
-                    .setView(view)
+                //    .setView(view)
                     .setCancelable(false)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         @Override
