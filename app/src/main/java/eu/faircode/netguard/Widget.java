@@ -96,12 +96,12 @@ public class Widget extends AppWidgetProvider {
                 else
                     pi = PendingIntent.getActivity(context, 0, new Intent(context, ActivityMain.class), PendingIntent.FLAG_UPDATE_CURRENT);
 
-                for (int id : appWidgetIds) {
-                    RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
-                    views.setOnClickPendingIntent(R.id.ivEnabled, pi);
-                    views.setImageViewResource(R.id.ivEnabled, enabled ? R.mipmap.ic_launcher : R.drawable.ic_security_white_24dp_60);
-                    appWidgetManager.updateAppWidget(id, views);
-                }
+               // for (int id : appWidgetIds) {
+                    //RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
+                   // views.setOnClickPendingIntent(R.id.ivEnabled, pi);
+                   // views.setImageViewResource(R.id.ivEnabled, enabled ? R.mipmap.ic_launcher : R.drawable.ic_security_white_24dp_60);
+                    //appWidgetManager.updateAppWidget(id, views);
+              //  }
             } catch (Throwable ex) {
                 Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
                 Util.sendCrashReport(ex, context);

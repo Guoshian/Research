@@ -139,9 +139,9 @@
                 <action android:name="eu.faircode.netguard.APPWIDGET_ON" />
                 <action android:name="eu.faircode.netguard.APPWIDGET_OFF" />
             </intent-filter>
-            <meta-data
+         <!--   <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/widget" />
+                android:resource="@xml/widget" />-->
         </receiver>
     </application>
 </manifest>
