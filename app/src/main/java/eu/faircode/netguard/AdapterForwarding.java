@@ -28,6 +28,8 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
+
+/*
 public class AdapterForwarding extends CursorAdapter {
     private static String TAG = "NetGuard.Forward";
 
@@ -74,3 +76,4 @@ public class AdapterForwarding extends CursorAdapter {
         tvRUid.setText(TextUtils.join(", ", Util.getApplicationNames(ruid, context)));
     }
 }
+*/
