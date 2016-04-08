@@ -37,21 +37,21 @@
             android:defaultValue="false"
             android:key="dark_theme"
             android:title="@string/setting_dark" />
-        <EditTextPreference
-            android:defaultValue="0"
-            android:inputType="number"
-            android:key="auto_enable"
-            android:summary="@string/summary_auto" />
-        <EditTextPreference
-            android:defaultValue="0"
-            android:inputType="number"
-            android:key="screen_delay"
-            android:summary="@string/summary_delay" />
- <!--       <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="update_check"
-            android:summary="@string/summary_update"
-            android:title="@string/setting_update" />-->
+        <!--  <EditTextPreference
+             android:defaultValue="0"
+             android:inputType="number"
+             android:key="auto_enable"
+             android:summary="@string/summary_auto" />
+           <EditTextPreference
+                   android:defaultValue="0"
+                   android:inputType="number"
+                   android:key="screen_delay"
+                   android:summary="@stsummary_delay" />
+               <CheckBoxPreference
+                   android:defaultValue="true"
+                   android:key="update_check"
+                   android:summary="@string/summary_update"
+                   android:title="@string/setting_update" />-->
     </PreferenceCategory>
 
     <PreferenceCategory

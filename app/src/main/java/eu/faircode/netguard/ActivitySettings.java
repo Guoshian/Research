@@ -132,12 +132,12 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         PreferenceCategory cat_development = (PreferenceCategory) screen.findPreference("category_development");
 
         // Handle auto enable
-        Preference pref_auto_enable = screen.findPreference("auto_enable");
-        pref_auto_enable.setTitle(getString(R.string.setting_auto, prefs.getString("auto_enable", "0")));
+       // Preference pref_auto_enable = screen.findPreference("auto_enable");
+        //pref_auto_enable.setTitle(getString(R.string.setting_auto, prefs.getString("auto_enable", "0")));
 
         // Handle screen delay
-        Preference pref_screen_delay = screen.findPreference("screen_delay");
-        pref_screen_delay.setTitle(getString(R.string.setting_delay, prefs.getString("screen_delay", "0")));
+        //Preference pref_screen_delay = screen.findPreference("screen_delay");
+       // pref_screen_delay.setTitle(getString(R.string.setting_delay, prefs.getString("screen_delay", "0")));
 
         // Handle theme
         Preference pref_screen_theme = screen.findPreference("theme");
@@ -492,11 +492,12 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             } else
                 ServiceSinkhole.reload("changed " + name, this);
 
-        } else if ("auto_enable".equals(name))
-            getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_auto, prefs.getString(name, "0")));
+        }
+        //else if ("auto_enable".equals(name))
+           // getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_auto, prefs.getString(name, "0")));
 
-        else if ("screen_delay".equals(name))
-            getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_delay, prefs.getString(name, "0")));
+        //else if ("screen_delay".equals(name))
+        //    getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_delay, prefs.getString(name, "0")));
 
         else if ("theme".equals(name) || "dark_theme".equals(name))
             recreate();
