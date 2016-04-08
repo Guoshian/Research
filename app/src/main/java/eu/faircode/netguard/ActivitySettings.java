@@ -140,7 +140,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
        // pref_screen_delay.setTitle(getString(R.string.setting_delay, prefs.getString("screen_delay", "0")));
 
         // Handle theme
-        Preference pref_screen_theme = screen.findPreference("theme");
+      /*  Preference pref_screen_theme = screen.findPreference("theme");
         String theme = prefs.getString("theme", "teal");
         String[] themeNames = getResources().getStringArray(R.array.themeNames);
         String[] themeValues = getResources().getStringArray(R.array.themeValues);
@@ -149,7 +149,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 pref_screen_theme.setTitle(getString(R.string.setting_theme, themeNames[i]));
                 break;
             }
-
+*/
         // Wi-Fi home
         MultiSelectListPreference pref_wifi_homes = (MultiSelectListPreference) screen.findPreference("wifi_homes");
         Set<String> ssid = prefs.getStringSet("wifi_homes", new HashSet<String>());
