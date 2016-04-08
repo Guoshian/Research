@@ -223,8 +223,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                     ServiceSinkhole.stop("switch off", ActivityMain.this);
             }
         });
-        if (enabled)
-            checkDoze();
+        //if (enabled)
+          //  checkDoze();
 
         // Network is metered
         ivMetered.setOnLongClickListener(new View.OnLongClickListener() {
@@ -460,8 +460,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             prefs.edit().putBoolean("enabled", resultCode == RESULT_OK).apply();
             if (resultCode == RESULT_OK) {
                 ServiceSinkhole.start("prepared", this);
-                checkDoze();
-            }
+                //checkDoze();
+           }
 
         } else if (requestCode == REQUEST_INVITE) {
             // Do nothing
@@ -634,6 +634,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         }
     }
 
+    /*
     private void checkDoze() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             final Intent doze = new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
@@ -672,7 +673,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 }
             }
         }
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
