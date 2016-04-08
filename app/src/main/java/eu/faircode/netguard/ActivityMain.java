@@ -725,8 +725,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             }
         });
 
-        if (!Util.hasValidFingerprint(this) || getIntentInvite(this).resolveActivity(getPackageManager()) == null)
-            menu.removeItem(R.id.menu_invite);
+        /*if (!Util.hasValidFingerprint(this) || getIntentInvite(this).resolveActivity(getPackageManager()) == null)
+            menu.removeItem(R.id.menu_invite);*/
 
        /* if (getIntentSupport().resolveActivity(getPackageManager()) == null)
             menu.removeItem(R.id.menu_support);*/
@@ -818,9 +818,9 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 startActivity(new Intent(ActivityMain.this, ActivityPro.class));
                 return true;*/
 
-            case R.id.menu_invite:
+          /*  case R.id.menu_invite:
                 startActivityForResult(getIntentInvite(this), REQUEST_INVITE);
-                return true;
+                return true;*/
 
           /*  case R.id.menu_legend:
                 menu_legend();
