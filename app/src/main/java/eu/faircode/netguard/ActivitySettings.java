@@ -234,7 +234,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         EditTextPreference pref_stats_frequency = (EditTextPreference) screen.findPreference("stats_frequency");
         EditTextPreference pref_stats_samples = (EditTextPreference) screen.findPreference("stats_samples");
        // pref_stats_frequency.setTitle(getString(R.string.setting_stats_frequency, prefs.getString("stats_frequency", "1000")));
-        pref_stats_samples.setTitle(getString(R.string.setting_stats_samples, prefs.getString("stats_samples", "90")));
+        //pref_stats_samples.setTitle(getString(R.string.setting_stats_samples, prefs.getString("stats_samples", "90")));
 
         // Handle export
         Preference pref_export = screen.findPreference("export");
@@ -650,8 +650,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
       //  else if ("stats_frequency".equals(name))
         //    getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_stats_frequency, prefs.getString(name, "1000")));
 
-        else if ("stats_samples".equals(name))
-            getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_stats_samples, prefs.getString(name, "90")));
+      //  else if ("stats_samples".equals(name))
+        //    getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_stats_samples, prefs.getString(name, "90")));
 
         else if ("hosts_url".equals(name))
             getPreferenceScreen().findPreference(name).setSummary(prefs.getString(name, "http://www.netguard.me/hosts"));

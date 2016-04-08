@@ -83,10 +83,12 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_pcap_record_size">PCAP record size: %s B</string>
   <string name="setting_pcap_file_size">PCAP max. file size: %s MB</string>
   <string name="setting_stats_category">網速通知</string>
-  <string name="setting_stats">顯示網速通知</string>
+
+  <!-- <string name="setting_stats">顯示網速通知</string>
   <string name="setting_stats_top">顯示最高使用量Apps</string>
-  <string name="setting_stats_frequency">取樣間隔: %s ms</string>
-  <string name="setting_stats_samples">取樣數: %s s</string>
+ <string name="setting_stats_frequency">取樣間隔: %s ms</string>
+  <string name="setting_stats_samples">取樣數: %s s</string>-->
+
   <string name="setting_backup">備份</string>
   <string name="setting_export">輸出設定</string>
   <string name="setting_import">輸入設定</string>
@@ -120,7 +122,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="summary_track_usage">Track the number of bytes sent and received for each application and address. This might result in extra battery usage.</string>
   <string name="summary_block_domains">Respond with \'name error\' (NXDOMAIN) for blocked domain names. This switch is disabled when no hosts file is available.</string>
   <string name="summary_proxy">SOCKS5 proxy server IP address and port number</string>
-  <string name="summary_stats">在狀態欄通知列顯示網速圖表</string>
+  <!--<string name="summary_stats">在狀態欄通知列顯示網速圖表</string>-->
   <string name="msg_sure">你確定?</string>
   <string name="msg_started">執行規則</string>
   <string name="msg_packages">%1$d 允許, %2$d 被阻擋</string>
@@ -206,14 +208,14 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <string name="title_pro_bought">啟用</string>
   <string name="title_pro_challenge">驗證密碼</string>
   <string name="title_pro_reponse">回答</string>
-  <string-array name="themeNames">
+ <!-- <string-array name="themeNames">
     <item>藍綠 / 橙</item>
     <item>藍 / 橙</item>
     <item>紫 / 紅</item>
     <item>琥珀 / 藍</item>
     <item>橙 / 灰</item>
     <item>綠</item>
-  </string-array>
+  </string-array>-->
   <string-array name="protocolNames">
     <item>UDP</item>
     <item>TCP</item>

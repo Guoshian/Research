@@ -160,82 +160,82 @@
             android:key="pcap_file_size" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="category_stats"
-        android:title="@string/setting_stats_category">
-        <eu.faircode.netguard.SwitchPreference
-            android:defaultValue="false"
-            android:key="show_stats"
-            android:summary="@string/summary_stats"
-            android:title="@string/setting_stats" />
-        <eu.faircode.netguard.SwitchPreference
-            android:defaultValue="false"
-            android:dependency="show_stats"
-            android:key="show_top"
-            android:title="@string/setting_stats_top" />
-        <EditTextPreference
-            android:defaultValue="1000"
-            android:dependency="show_stats"
-            android:inputType="number"
-            android:key="stats_frequency" />
-        <EditTextPreference
-            android:defaultValue="90"
-            android:dependency="show_stats"
-            android:inputType="number"
-            android:key="stats_samples" />
-    </PreferenceCategory>
+    <!--   <PreferenceCategory
+          android:key="category_stats"
+          android:title="@string/setting_stats_category">
+          <eu.faircode.netguard.SwitchPreference
+              android:defaultValue="false"
+              android:key="show_stats"
+              android:summary="@string/summary_stats"
+              android:title="@string/setting_stat
+            <eu.faircode.netguard.SwitchPreference
+                android:defaultValue="false"
+                android:dependency="show_stats"
+                android:key="show_top"
+                android:title="@string/setting_stats_top" />
+            <EditTextPreference
+                    android:defaultValue="1000"
+                    android:dependency="show_stats"
+                    android:inputType="number"
+                    android:key="stats_frequency" />
+                <EditTextPreference
+                    android:defaultValue="90"
+                    android:dependency="show_stats"
+                    android:inputType="number"
+                    android:key="stats_samples" />
+        </PreferenceCategory>-->
 
-    <PreferenceCategory
-        android:key="category_backup"
-        android:title="@string/setting_backup">
-        <Preference
-            android:key="export"
-            android:title="@string/setting_export" />
-        <Preference
-            android:key="import"
-            android:title="@string/setting_import" />
-        <Preference
-            android:dependency="filter"
-            android:key="hosts_import"
-            android:title="@string/setting_hosts" />
-        <EditTextPreference
-            android:defaultValue="http://www.netguard.me/hosts"
-            android:dependency="filter"
-            android:hint="http://www.netguard.me/hosts"
-            android:key="hosts_url"
-            android:title="@string/setting_hosts_url" />
-        <Preference
-            android:dependency="hosts_url"
-            android:key="hosts_download"
-            android:title="@string/setting_hosts_download" />
-    </PreferenceCategory>
+        <PreferenceCategory
+            android:key="category_backup"
+            android:title="@string/setting_backup">
+            <Preference
+                android:key="export"
+                android:title="@string/setting_export" />
+            <Preference
+                android:key="import"
+                android:title="@string/setting_import" />
+            <Preference
+                android:dependency="filter"
+                android:key="hosts_import"
+                android:title="@string/setting_hosts" />
+            <EditTextPreference
+                android:defaultValue="http://www.netguard.me/hosts"
+                android:dependency="filter"
+                android:hint="http://www.netguard.me/hosts"
+                android:key="hosts_url"
+                android:title="@string/setting_hosts_url" />
+            <Preference
+                android:dependency="hosts_url"
+                android:key="hosts_download"
+                android:title="@string/setting_hosts_download" />
+        </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="category_development"
-        android:title="Development">
-        <ListPreference
-            android:defaultValue="6"
-            android:entries="@array/logLevelNames"
-            android:entryValues="@array/logLevelValues"
-            android:key="loglevel"
-            android:summary="Log level verbose, debug and info will impact performance and battery usage"
-            android:title="Native log level" />
-        <Preference
-            android:key="show_resolved"
-            android:title="@string/setting_show_resolved" />
-    </PreferenceCategory>
+        <PreferenceCategory
+            android:key="category_development"
+            android:title="Development">
+            <ListPreference
+                android:defaultValue="6"
+                android:entries="@array/logLevelNames"
+                android:entryValues="@array/logLevelValues"
+                android:key="loglevel"
+                android:summary="Log level verbose, debug and info will impact performance and battery usage"
+                android:title="Native log level" />
+            <Preference
+                android:key="show_resolved"
+                android:title="@string/setting_show_resolved" />
+        </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="category_technical"
-        android:title="@string/setting_technical">
-        <Preference
-            android:key="technical_info"
-            android:title="@string/setting_technical_general" />
-        <Preference
-            android:key="technical_network"
-            android:title="@string/setting_technical_networks" />
-        <Preference
-            android:key="technical_subscription"
-            android:title="@string/setting_technical_subscription" />
-    </PreferenceCategory>
-</PreferenceScreen>
+        <PreferenceCategory
+            android:key="category_technical"
+            android:title="@string/setting_technical">
+            <Preference
+                android:key="technical_info"
+                android:title="@string/setting_technical_general" />
+            <Preference
+                android:key="technical_network"
+                android:title="@string/setting_technical_networks" />
+            <Preference
+                android:key="technical_subscription"
+                android:title="@string/setting_technical_subscription" />
+        </PreferenceCategory>
+    </PreferenceScreen>
