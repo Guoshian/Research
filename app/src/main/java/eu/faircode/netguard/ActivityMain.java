@@ -106,11 +106,11 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         Log.i(TAG, "Create version=" + Util.getSelfVersionName(this) + "/" + Util.getSelfVersionCode(this));
         Util.logExtras(getIntent());
 
-        if (Build.VERSION.SDK_INT < MIN_SDK) {
+       /* if (Build.VERSION.SDK_INT < MIN_SDK) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.android);
             return;
-        }
+        }*/
 
         Util.setTheme(this);
         super.onCreate(savedInstanceState);
