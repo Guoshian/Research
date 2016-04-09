@@ -97,11 +97,11 @@
     <PreferenceCategory
         android:key="category_advanced_options"
         android:title="@string/setting_advanced_options">
-        <eu.faircode.netguard.SwitchPreference
+       <!-- <eu.faircode.netguard.SwitchPreference
             android:defaultValue="false"
             android:key="manage_system"
             android:summary="@string/summary_system"
-            android:title="@string/setting_system" />
+            android:title="@string/setting_system" />-->
         <eu.faircode.netguard.SwitchPreference
             android:defaultValue="false"
             android:key="log_app"

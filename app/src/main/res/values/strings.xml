@@ -72,8 +72,10 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="setting_national_roaming">Ignore national roaming</string>
 
     <string name="setting_advanced_options">Advanced options</string>
-    <string name="setting_system">Manage system applications</string>
+
+    <!--<string name="setting_system">Manage system applications</string>-->
     <string name="setting_log_app">Log internet access</string>
+
     <string name="setting_access">Notify on internet access</string>
     <string name="setting_filter">Filter traffic</string>
     <string name="setting_track_usage">Track network usage</string>
@@ -118,7 +120,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="summary_metered_4g">Apply Wi-Fi network rules for LTE data connections</string>
     <string name="summary_national_roaming">Do not apply roaming rules when the SIM and mobile network country are the same</string>
 
-    <string name="summary_system">Define rules for system applications (for experts)</string>
+    <!--<string name="summary_system">Define rules for system applications (for experts)</string>-->
     <string name="summary_log_app">Log attempts to access the internet for applications. This might result in extra battery usage.</string>
     <string name="summary_access">Show a status bar notification when an application attempts to access a new internet address</string>
     <string name="summary_filter">Filter IP packets going out of the VPN tunnel. This might result in extra battery usage.</string>
