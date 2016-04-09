@@ -273,29 +273,29 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             cat_backup.removePreference(pref_hosts_download);
 
         } else {
-            pref_block_domains.setEnabled(new File(getFilesDir(), "hosts.txt").exists());
+          //  pref_block_domains.setEnabled(new File(getFilesDir(), "hosts.txt").exists());
 
-            String last_import = prefs.getString("hosts_last_import", null);
-            String last_download = prefs.getString("hosts_last_download", null);
-            if (last_import != null)
-                pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
+          //  String last_import = prefs.getString("hosts_last_import", null);
+           // String last_download = prefs.getString("hosts_last_download", null);
+           // if (last_import != null)
+            //    pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
             //if (last_download != null)
               //  pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));
 
             // Handle hosts import
             // https://github.com/Free-Software-for-Android/AdAway/wiki/HostsSources
-            pref_hosts_import.setEnabled(getIntentOpenHosts().resolveActivity(getPackageManager()) != null);
-            pref_hosts_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    startActivityForResult(getIntentOpenHosts(), ActivitySettings.REQUEST_HOSTS);
-                    return true;
-                }
-            });
+           // pref_hosts_import.setEnabled(getIntentOpenHosts().resolveActivity(getPackageManager()) != null);
+           // pref_hosts_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+              //  @Override
+              //  public boolean onPreferenceClick(Preference preference) {
+              //      startActivityForResult(getIntentOpenHosts(), ActivitySettings.REQUEST_HOSTS);
+                //    return true;
+              //  }
+           // });
 
             // Handle hosts file download
-            pref_hosts_url.setSummary(pref_hosts_url.getText());
-           /* pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+           /* pref_hosts_url.setSummary(pref_hosts_url.getText());
+            pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     final File tmp = new File(getFilesDir(), "hosts.tmp");

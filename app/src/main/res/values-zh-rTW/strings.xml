@@ -93,8 +93,8 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_export">輸出設定</string>
   <string name="setting_import">輸入設定</string>
   <string name="setting_hosts">Import hosts file</string>
-  <string name="setting_hosts_url">Hosts file download URL</string>
-  <!--<string name="setting_hosts_download">Download hosts file</string>-->
+  <!--<string name="setting_hosts_url">Hosts file download URL</string>
+ <string name="setting_hosts_download">Download hosts file</string>-->
 
 
 
@@ -162,8 +162,8 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <string name="msg_import_last">Last import: %s</string>
 
   <string name="msg_downloading">Downloading\n%1s</string>
-  <string name="msg_downloaded">Hosts file downloaded</string>
-  <!--<string name="msg_download_last">Last download: %s</string>-->
+  <!-- <string name="msg_downloaded">Hosts file downloaded</string>
+   <string name="msg_download_last">Last download: %s</string>-->
 
 
   <string name="msg_start_forward" formatted="false">Start forwarding from %1$s port %2$d to %3$s:%4$d of \'%5$s\'?</string>

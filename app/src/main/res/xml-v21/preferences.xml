@@ -198,13 +198,16 @@
                 android:dependency="filter"
                 android:key="hosts_import"
                 android:title="@string/setting_hosts" />
-            <EditTextPreference
+          <!--  <EditTextPreference
                 android:defaultValue="http://www.netguard.me/hosts"
                 android:dependency="filter"
                 android:hint="http://www.netguard.me/hosts"
                 android:key="hosts_url"
                 android:title="@string/setting_hosts_url" />
-
+            <Preference
+                android:dependency="hosts_url"
+                android:key="hosts_download"
+                android:title="@string/setting_hosts_download" />-->
         </PreferenceCategory>
 
         <PreferenceCategory
