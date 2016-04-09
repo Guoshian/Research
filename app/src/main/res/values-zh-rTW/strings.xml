@@ -68,9 +68,10 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_metered_3g">視作3G</string>
   <string name="setting_metered_4g">視作LTE</string>
   <string name="setting_national_roaming">忽略國際漫遊</string>
-  <string name="setting_advanced_options">Advanced options</string>
 
-  <!--<string name="setting_system">管理系統程式</string>-->
+  <!--<string name="setting_advanced_options">Advanced options</string>
+
+  <string name="setting_system">管理系統程式</string>-->
   <!--<string name="setting_log_app">Log internet access</string>-->
 
   <!--<string name="setting_access">Notify on internet access</string>-->
@@ -87,13 +88,13 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <!--<string name="setting_vpn4">VPN IPv4: %s</string>
   <string name="setting_vpn6">VPN IPv6: %s</string>
   <string name="setting_dns">VPN DNS: %s</string>-->
-  <string name="setting_pcap_record_size">PCAP record size: %s B</string>
-  <string name="setting_pcap_file_size">PCAP max. file size: %s MB</string>
-  <string name="setting_stats_category">網速通知</string>
+  <!--<string name="setting_pcap_record_size">PCAP record size: %s B</string>
+  <string name="setting_pcap_file_size">PCAP max. file size: %s MB</string>-->
 
-  <!-- <string name="setting_stats">顯示網速通知</string>
+  <!--<string name="setting_stats_category">網速通知</string>
+  <string name="setting_stats">顯示網速通知</string>
   <string name="setting_stats_top">顯示最高使用量Apps</string>
- <string name="setting_stats_frequency">取樣間隔: %s ms</string>
+  <string name="setting_stats_frequency">取樣間隔: %s ms</string>
   <string name="setting_stats_samples">取樣數: %s s</string>-->
 
   <string name="setting_backup">備份</string>

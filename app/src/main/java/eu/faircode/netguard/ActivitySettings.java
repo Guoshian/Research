@@ -229,8 +229,10 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         */
 
         // PCAP parameters
+        /*
         screen.findPreference("pcap_record_size").setTitle(getString(R.string.setting_pcap_record_size, prefs.getString("pcap_record_size", "64")));
         screen.findPreference("pcap_file_size").setTitle(getString(R.string.setting_pcap_file_size, prefs.getString("pcap_file_size", "2")));
+        */
 
         // Handle stats
         EditTextPreference pref_stats_frequency = (EditTextPreference) screen.findPreference("stats_frequency");
