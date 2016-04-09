@@ -113,11 +113,11 @@
             android:key="notify_access"
             android:summary="@string/summary_access"
             android:title="@string/setting_access" />-->
-        <eu.faircode.netguard.SwitchPreference
+        <!--<eu.faircode.netguard.SwitchPreference
             android:defaultValue="false"
             android:key="filter"
             android:summary="@string/summary_filter"
-            android:title="@string/setting_filter" />
+            android:title="@string/setting_filter" />-->
       <!--  <eu.faircode.netguard.SwitchPreference
             android:defaultValue="false"
             android:dependency="filter"

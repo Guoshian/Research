@@ -118,11 +118,11 @@
             android:key="notify_access"
             android:summary="@string/summary_access"
             android:title="@string/setting_access" />-->
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="filter"
             android:summary="@string/summary_filter"
-            android:title="@string/setting_filter" />
+            android:title="@string/setting_filter" />-->
         <!--<CheckBoxPreference
             android:defaultValue="false"
             android:dependency="filter"

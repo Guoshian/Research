@@ -168,8 +168,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         pref_wifi_homes.setEntryValues(listSSID.toArray(new CharSequence[0]));
 
         // Filtering always enabled
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
-            cat_advanced.removePreference(screen.findPreference("filter"));
+       /* if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            cat_advanced.removePreference(screen.findPreference("filter"));*/
 
        /* Preference pref_reset_usage = screen.findPreference("reset_usage");
         pref_reset_usage.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
