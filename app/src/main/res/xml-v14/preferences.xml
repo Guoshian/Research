@@ -76,7 +76,7 @@
             android:key="use_metered"
             android:summary="@string/summary_metered"
             android:title="@string/setting_metered" />
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="unmetered_2g"
             android:summary="@string/summary_metered_2g"
@@ -90,7 +90,7 @@
             android:defaultValue="false"
             android:key="unmetered_4g"
             android:summary="@string/summary_metered_4g"
-            android:title="@string/setting_metered_4g" />
+            android:title="@string/setting_metered_4g" />-->
         <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="national_roaming"

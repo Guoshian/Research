@@ -64,9 +64,9 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_lan">Allow LAN access</string>
   <string name="setting_wifi_home">Wi-Fi: %1$s</string>
   <string name="setting_metered">處理計量型Wi-Fi</string>
-  <string name="setting_metered_2g">視作2G</string>
+  <!--<string name="setting_metered_2g">視作2G</string>
   <string name="setting_metered_3g">視作3G</string>
-  <string name="setting_metered_4g">視作LTE</string>
+  <string name="setting_metered_4g">視作LTE</string>-->
   <!--<string name="setting_national_roaming">忽略國際漫遊</string>-->
 
   <!--<string name="setting_advanced_options">Advanced options</string>
@@ -123,9 +123,9 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="summary_lan">Allow applications to connect to local area network addresses, like 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16</string>
   <string name="summary_wifi_home">只為選定的網路套用Wi-Fi規則(未被選定的將套用行動網路規則)</string>
   <string name="summary_metered">套用行動網路規則到計量型(付費,限量)Wi-Fi</string>
-  <string name="summary_metered_2g">套用Wi-Fi規則到2G連接</string>
+  <!--<string name="summary_metered_2g">套用Wi-Fi規則到2G連接</string>
   <string name="summary_metered_3g">套用Wi-Fi規則到3G連接</string>
-  <string name="summary_metered_4g">套用Wi-Fi規則到LTE連接</string>
+  <string name="summary_metered_4g">套用Wi-Fi規則到LTE連接</string>-->
   <!--<string name="summary_national_roaming">當Sim卡和行動網路所在國家相同時不套用漫遊規則</string>-->
 
   <!--<string name="summary_system">為系統程式定義規則(專家用)</string>-->
