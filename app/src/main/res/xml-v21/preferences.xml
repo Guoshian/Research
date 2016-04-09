@@ -94,9 +94,9 @@
             android:title="@string/setting_national_roaming" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="category_advanced_options"
-        android:title="@string/setting_advanced_options">
+        android:title="@string/setting_advanced_options">-->
        <!-- <eu.faircode.netguard.SwitchPreference
             android:defaultValue="false"
             android:key="manage_system"
@@ -158,7 +158,7 @@
             android:defaultValue="2"
             android:inputType="number"
             android:key="pcap_file_size" />-->
-    </PreferenceCategory>
+    <!--</PreferenceCategory>-->
 
     <!--   <PreferenceCategory
           android:key="category_stats"

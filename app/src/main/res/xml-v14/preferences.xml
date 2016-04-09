@@ -98,9 +98,9 @@
             android:title="@string/setting_national_roaming" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="category_advanced_options"
-        android:title="@string/setting_advanced_options">
+        android:title="@string/setting_advanced_options">-->
 
         <!--<CheckBoxPreference
             android:defaultValue="false"
@@ -163,7 +163,7 @@
             android:defaultValue="2"
             android:inputType="number"
             android:key="pcap_file_size" />-->
-    </PreferenceCategory>
+    <!--</PreferenceCategory>-->
 
     <!--    <PreferenceCategory
          android:key="category_stats"
