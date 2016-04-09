@@ -171,7 +171,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
             cat_advanced.removePreference(screen.findPreference("filter"));
 
-        Preference pref_reset_usage = screen.findPreference("reset_usage");
+       /* Preference pref_reset_usage = screen.findPreference("reset_usage");
         pref_reset_usage.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
@@ -201,7 +201,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 });
                 return false;
             }
-        });
+        });*/
 
         // Handle port forwarding
 
