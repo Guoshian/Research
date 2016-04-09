@@ -71,7 +71,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_advanced_options">Advanced options</string>
 
   <!--<string name="setting_system">管理系統程式</string>-->
-  <string name="setting_log_app">Log internet access</string>
+  <!--<string name="setting_log_app">Log internet access</string>-->
 
   <!--<string name="setting_access">Notify on internet access</string>-->
   <string name="setting_filter">Filter traffic</string>
@@ -124,7 +124,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="summary_national_roaming">當Sim卡和行動網路所在國家相同時不套用漫遊規則</string>
 
   <!--<string name="summary_system">為系統程式定義規則(專家用)</string>-->
-  <string name="summary_log_app">Log attempts to access the internet for applications. This might result in extra battery usage.</string>
+  <!--<string name="summary_log_app">Log attempts to access the internet for applications. This might result in extra battery usage.</string>-->
 
   <!--<string name="summary_access">Show a status bar notification when an application attempts to access a new internet address</string>-->
 
