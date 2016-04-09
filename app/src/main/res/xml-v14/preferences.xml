@@ -132,12 +132,12 @@
         <!--<Preference
             android:key="reset_usage"
             android:title="@string/setting_reset_usage" />-->
-        <CheckBoxPreference
+       <!-- <CheckBoxPreference
             android:defaultValue="true"
             android:dependency="filter"
             android:key="use_hosts"
             android:summary="@string/summary_block_domains"
-            android:title="@string/setting_block_domains" />
+            android:title="@string/setting_block_domains" />-->
         <Preference
             android:dependency="filter"
             android:key="forwarding"
@@ -225,9 +225,9 @@
             android:key="loglevel"
             android:summary="Log level verbose, debug and info will impact performance and battery usage"
             android:title="Native log level" />
-        <Preference
+        <!--ference
             android:key="show_resolved"
-            android:title="@string/setting_show_resolved" />
+            android:title="@string/setting_show_resolved" />-->
     </PreferenceCategory>
 
     <PreferenceCategory
