@@ -71,11 +71,11 @@
             android:defaultValue="@array/default_wifi_home"
             android:key="wifi_homes"
             android:summary="@string/summary_wifi_home" />
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="use_metered"
             android:summary="@string/summary_metered"
-            android:title="@string/setting_metered" />
+            android:title="@string/setting_metered" />-->
         <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="unmetered_2g"
