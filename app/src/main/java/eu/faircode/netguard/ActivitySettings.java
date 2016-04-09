@@ -279,8 +279,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             String last_download = prefs.getString("hosts_last_download", null);
             if (last_import != null)
                 pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
-            if (last_download != null)
-                pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));
+            //if (last_download != null)
+              //  pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));
 
             // Handle hosts import
             // https://github.com/Free-Software-for-Android/AdAway/wiki/HostsSources
@@ -295,7 +295,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
 
             // Handle hosts file download
             pref_hosts_url.setSummary(pref_hosts_url.getText());
-            pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+           /* pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     final File tmp = new File(getFilesDir(), "hosts.tmp");
@@ -312,11 +312,11 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                                 String last = SimpleDateFormat.getDateTimeInstance().format(new Date().getTime());
                                 prefs.edit().putString("hosts_last_download", last).apply();
 
-                                if (running) {
-                                    getPreferenceScreen().findPreference("use_hosts").setEnabled(true);
-                                    pref_hosts_download.setSummary(getString(R.string.msg_download_last, last));
-                                    Toast.makeText(ActivitySettings.this, R.string.msg_downloaded, Toast.LENGTH_LONG).show();
-                                }
+                               // if (running) {
+                                 //   getPreferenceScreen().findPreference("use_hosts").setEnabled(true);
+                                  //  pref_hosts_download.setSummary(getString(R.string.msg_download_last, last));
+                                //    Toast.makeText(ActivitySettings.this, R.string.msg_downloaded, Toast.LENGTH_LONG).show();
+                             //   }
 
                                 ServiceSinkhole.reload("hosts file download", ActivitySettings.this);
                             }
@@ -341,7 +341,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                     }
                     return true;
                 }
-            });
+            });*/
         }
 
         // Development
