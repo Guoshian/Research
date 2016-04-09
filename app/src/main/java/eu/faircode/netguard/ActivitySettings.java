@@ -151,21 +151,21 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             }
 */
         // Wi-Fi home
-        MultiSelectListPreference pref_wifi_homes = (MultiSelectListPreference) screen.findPreference("wifi_homes");
-        Set<String> ssid = prefs.getStringSet("wifi_homes", new HashSet<String>());
-        if (ssid.size() > 0)
-            pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, TextUtils.join(", ", ssid)));
-        else
-            pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, "-"));
+        //MultiSelectListPreference pref_wifi_homes = (MultiSelectListPreference) screen.findPreference("wifi_homes");
+       // Set<String> ssid = prefs.getStringSet("wifi_homes", new HashSet<String>());
+        //if (ssid.size() > 0)
+        //    pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, TextUtils.join(", ", ssid)));
+        //else
+        //    pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, "-"));
 
-        WifiManager wm = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-        List<CharSequence> listSSID = new ArrayList<>();
-        List<WifiConfiguration> configs = wm.getConfiguredNetworks();
-        if (configs != null)
-            for (WifiConfiguration config : configs)
-                listSSID.add(config.SSID == null ? "NULL" : config.SSID);
-        pref_wifi_homes.setEntries(listSSID.toArray(new CharSequence[0]));
-        pref_wifi_homes.setEntryValues(listSSID.toArray(new CharSequence[0]));
+       // WifiManager wm = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+       // List<CharSequence> listSSID = new ArrayList<>();
+       // List<WifiConfiguration> configs = wm.getConfiguredNetworks();
+       // if (configs != null)
+       //     for (WifiConfiguration config : configs)
+        //        listSSID.add(config.SSID == null ? "NULL" : config.SSID);
+        //pref_wifi_homes.setEntries(listSSID.toArray(new CharSequence[0]));
+        //pref_wifi_homes.setEntryValues(listSSID.toArray(new CharSequence[0]));
 
         // Filtering always enabled
        /* if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
@@ -512,16 +512,17 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         else if ("lan".equals(name))
             ServiceSinkhole.reload("changed " + name, this);
 
-        else if ("wifi_homes".equals(name)) {
-            MultiSelectListPreference pref_wifi_homes = (MultiSelectListPreference) getPreferenceScreen().findPreference(name);
-            Set<String> ssid = prefs.getStringSet(name, new HashSet<String>());
-            if (ssid.size() > 0)
-                pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, TextUtils.join(", ", ssid)));
-            else
-                pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, "-"));
-            ServiceSinkhole.reload("changed " + name, this);
+        //else if ("wifi_homes".equals(name)) {
+           // MultiSelectListPreference pref_wifi_homes = (MultiSelectListPreference) getPreferenceScreen().findPreference(name);
+           // Set<String> ssid = prefs.getStringSet(name, new HashSet<String>());
+           // if (ssid.size() > 0)
+           //     pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, TextUtils.join(", ", ssid)));
+            //else
+            //    pref_wifi_homes.setTitle(getString(R.string.setting_wifi_home, "-"));
+            //ServiceSinkhole.reload("changed " + name, this);
 
-        } else if ("use_metered".equals(name))
+       // }
+        else if ("use_metered".equals(name))
             ServiceSinkhole.reload("changed " + name, this);
 
         else if ("unmetered_2g".equals(name) ||
