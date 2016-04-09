@@ -142,7 +142,7 @@
             android:dependency="filter"
             android:key="forwarding"
             android:title="@string/setting_forwarding" />-->
-        <EditTextPreference
+       <!-- <EditTextPreference
             inputType="phone"
             android:hint="10.1.10.1"
             android:inputType="phone"
@@ -154,7 +154,7 @@
         <EditTextPreference
             android:dependency="filter"
             android:inputType="text"
-            android:key="dns" />
+            android:key="dns" />-->
         <EditTextPreference
             android:defaultValue="64"
             android:inputType="number"
