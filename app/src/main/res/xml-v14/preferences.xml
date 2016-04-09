@@ -54,9 +54,9 @@
                  android:title="@string/setting_update" />
     </PreferenceCategory>-->
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="category_options"
-        android:title="@string/setting_network_options">
+        android:title="@string/setting_network_options">-->
         <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="tethering"
@@ -96,7 +96,7 @@
             android:key="national_roaming"
             android:summary="@string/summary_national_roaming"
             android:title="@string/setting_national_roaming" />-->
-    </PreferenceCategory>
+   <!-- </PreferenceCategory>-->
 
     <!--<PreferenceCategory
         android:key="category_advanced_options"
