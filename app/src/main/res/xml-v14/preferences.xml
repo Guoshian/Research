@@ -190,9 +190,9 @@
                  android:key="stats_samples" />
     </PreferenceCategory>-->
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="category_backup"
-        android:title="@string/setting_backup">
+        android:title="@string/setting_backup">-->
         <!--  <Preference
               android:key="export"
               android:title="@string/setting_export" />
@@ -213,7 +213,7 @@
              android:dependency="hosts_url"
              android:key="hosts_download"
              android:title="@string/setting_hosts_download" />-->
-    </PreferenceCategory>
+    <!--</PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="category_development"
