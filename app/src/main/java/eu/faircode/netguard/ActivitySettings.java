@@ -349,12 +349,12 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         }
 
         // Development
-        Preference pref_show_resolved = screen.findPreference("show_resolved");
+       /* Preference pref_show_resolved = screen.findPreference("show_resolved");
         if (!(Util.isDebuggable(this) || Util.getSelfVersionName(this).contains("beta"))) {
             screen.removePreference(cat_development);
             prefs.edit().remove("loglevel").apply();
         } else if (!Util.isDebuggable(this))
-            cat_development.removePreference(pref_show_resolved);
+            cat_development.removePreference(pref_show_resolved);*/
 /*
         // Show resolved
         pref_show_resolved.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
