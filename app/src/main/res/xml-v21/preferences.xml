@@ -210,9 +210,9 @@
                     android:title="@string/setting_hosts_download" />-->
         <!--</PreferenceCategory>-->
 
-        <PreferenceCategory
+        <!--<PreferenceCategory
             android:key="category_development"
-            android:title="Development">
+            android:title="Development">-->
             <!-- <ListPreference
                  android:defaultValue="6"
                  android:entries="@array/logLevelNames"
@@ -223,7 +223,7 @@
          <Preference
                  android:key="show_resolved"
                  android:title="@string/setting_show_resolved" />-->
-        </PreferenceCategory>
+        <!--</PreferenceCategory>-->
 
         <PreferenceCategory
             android:key="category_technical"
