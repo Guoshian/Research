@@ -193,12 +193,12 @@
     <PreferenceCategory
         android:key="category_backup"
         android:title="@string/setting_backup">
-        <Preference
-            android:key="export"
-            android:title="@string/setting_export" />
-        <Preference
-            android:key="import"
-            android:title="@string/setting_import" />
+        <!--  <Preference
+              android:key="export"
+              android:title="@string/setting_export" />
+      <Preference
+              android:key="import"
+              android:title="@string/setting_import" />-->
         <!-- <Preference
              android:dependency="filter"
              android:key="hosts_import"

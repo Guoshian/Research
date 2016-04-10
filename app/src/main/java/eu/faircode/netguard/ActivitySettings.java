@@ -241,7 +241,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         //pref_stats_samples.setTitle(getString(R.string.setting_stats_samples, prefs.getString("stats_samples", "90")));
 
         // Handle export
-        Preference pref_export = screen.findPreference("export");
+       /* Preference pref_export = screen.findPreference("export");
         pref_export.setEnabled(getIntentCreateExport().resolveActivity(getPackageManager()) != null);
         pref_export.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
@@ -249,10 +249,10 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 startActivityForResult(getIntentCreateExport(), ActivitySettings.REQUEST_EXPORT);
                 return true;
             }
-        });
+        });*/
 
         // Handle import
-        Preference pref_import = screen.findPreference("import");
+       /* Preference pref_import = screen.findPreference("import");
         pref_import.setEnabled(getIntentOpenExport().resolveActivity(getPackageManager()) != null);
         pref_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
@@ -260,7 +260,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 startActivityForResult(getIntentOpenExport(), ActivitySettings.REQUEST_IMPORT);
                 return true;
             }
-        });
+        });*/
 
         // Hosts file settings
         Preference pref_block_domains = screen.findPreference("use_hosts");
