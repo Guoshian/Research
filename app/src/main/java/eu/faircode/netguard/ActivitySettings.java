@@ -235,8 +235,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         */
 
         // Handle stats
-        EditTextPreference pref_stats_frequency = (EditTextPreference) screen.findPreference("stats_frequency");
-        EditTextPreference pref_stats_samples = (EditTextPreference) screen.findPreference("stats_samples");
+        /*EditTextPreference pref_stats_frequency = (EditTextPreference) screen.findPreference("stats_frequency");
+        EditTextPreference pref_stats_samples = (EditTextPreference) screen.findPreference("stats_samples");*/
        // pref_stats_frequency.setTitle(getString(R.string.setting_stats_frequency, prefs.getString("stats_frequency", "1000")));
         //pref_stats_samples.setTitle(getString(R.string.setting_stats_samples, prefs.getString("stats_samples", "90")));
 
