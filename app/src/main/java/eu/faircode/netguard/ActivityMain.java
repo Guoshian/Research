@@ -140,13 +140,13 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         ivMetered = (ImageView) actionView.findViewById(R.id.ivMetered);
 
         // Icon
-        ivIcon.setOnLongClickListener(new View.OnLongClickListener() {
+       /* ivIcon.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 menu_about();
                 return true;
             }
-        });
+        });*/
 
         // Title
         getSupportActionBar().setTitle(null);
@@ -829,9 +829,9 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 startActivity(getIntentSupport());
                 return true;
 
-            case R.id.menu_about:
+            /*case R.id.menu_about:
                 menu_about();
-                return true;
+                return true;*/
 
             default:
                 return super.onOptionsItemSelected(item);
@@ -888,7 +888,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         dialogLegend.show();
     }
 
-    private void menu_about() {
+    /*private void menu_about() {
         // Create view
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.about, null, false);
@@ -950,7 +950,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 })
                 .create();
         dialogAbout.show();
-    }
+    }*/
 
     private static Intent getIntentInvite(Context context) {
         Intent intent = new Intent("com.google.android.gms.appinvite.ACTION_APP_INVITE");

@@ -8,6 +8,7 @@
   <string name="app_first">Great care has been taken to develop and test NetGuard,
 however it is impossible to guarantee NetGuard will work correctly on every device.
 \n\nBy using NetGuard, you agree to the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License version 3</a></string>
+
   <string name="menu_search">搜尋App</string>
   <string name="menu_filter">篩選程式</string>
   <string name="menu_app_user">顯示使用者程式</string>
@@ -18,12 +19,14 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="menu_sort_name">按名稱排序</string>
   <string name="menu_sort_uid">Sort on uid</string>
   <string name="menu_sort_data">按流量排序</string>
+
   <string name="menu_log">顯示紀錄</string>
   <string name="menu_settings">設定</string>
   <string name="menu_invite">邀請</string>
   <string name="menu_legend">Legend</string>
   <string name="menu_support">支援</string>
   <string name="menu_about">關於</string>
+
   <string name="menu_protocol_other">Other</string>
   <string name="menu_traffic_allowed">Allowed</string>
   <string name="menu_traffic_blocked">Blocked</string>
@@ -37,12 +40,14 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="menu_reset">Reset</string>
   <string name="menu_add">Add</string>
   <string name="menu_delete">Delete</string>
+
   <string name="title_protocol">Protocol</string>
   <string name="title_dport">Source port</string>
   <string name="title_raddr">Destination address</string>
   <string name="title_rport">Destination port</string>
   <string name="title_ruid">Destination application</string>
   <string name="title_external">For an external server select \'nobody\'</string>
+
   <string name="setting_defaults">預設</string>
   <string name="setting_whitelist_wifi">阻擋Wi-Fi</string>
   <string name="setting_whitelist_other">阻擋行動網路</string>
@@ -93,6 +98,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_technical_general">General</string>
   <string name="setting_technical_networks">Networks</string>
   <string name="setting_technical_subscription">Subscriptions</string>
+
   <string name="summary_auto">\"在禁用小工具之後,自動在設定的時間後啟動網路守門人
 輸入0來關閉這項設定\"</string>
   <string name="summary_delay">在關閉螢幕後, 在所選數目分鐘內繼續保持螢幕開啟時的規則 (輸入0以禁用此選項)</string>
@@ -113,6 +119,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="summary_block_domains">Respond with \'name error\' (NXDOMAIN) for blocked domain names. This switch is disabled when no hosts file is available.</string>
   <string name="summary_proxy">SOCKS5 proxy server IP address and port number</string>
   <string name="summary_stats">在狀態欄通知列顯示網速圖表</string>
+
   <string name="msg_sure">你確定?</string>
   <string name="msg_started">執行規則</string>
   <string name="msg_packages">%1$d 允許, %2$d 被阻擋</string>
@@ -155,6 +162,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <string name="msg_metered">Network is metered</string>
   <string name="msg_queue">NetGuard is busy</string>
   <string name="msg_update">Update available, tap to download</string>
+
   <string name="title_unmetered_allowed">Unmetered traffic is allowed</string>
   <string name="title_unmetered_blocked">Unmetered traffic is blocked</string>
   <string name="title_metered_allowed">Metered traffic is allowed</string>
@@ -198,6 +206,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <string name="title_pro_bought">啟用</string>
   <string name="title_pro_challenge">驗證密碼</string>
   <string name="title_pro_reponse">回答</string>
+
   <string-array name="themeNames">
     <item>藍綠 / 橙</item>
     <item>藍 / 橙</item>
