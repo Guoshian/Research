@@ -255,7 +255,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
 
         // Hosts file settings
         Preference pref_block_domains = screen.findPreference("use_hosts");
-        Preference pref_hosts_import = screen.findPreference("hosts_import");
+        //Preference pref_hosts_import = screen.findPreference("hosts_import");
         //EditTextPreference pref_hosts_url = (EditTextPreference) screen.findPreference("hosts_url");
         //final Preference pref_hosts_download = screen.findPreference("hosts_download");
 
@@ -263,7 +263,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             cat_options.removePreference(screen.findPreference("update_check"));
             cat_advanced.removePreference(pref_block_domains);
             cat_advanced.removePreference(pref_forwarding);
-            cat_backup.removePreference(pref_hosts_import);
+            //cat_backup.removePreference(pref_hosts_import);
             //cat_backup.removePreference(pref_hosts_url);
             //cat_backup.removePreference(pref_hosts_download);
 
@@ -272,21 +272,21 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
 
             String last_import = prefs.getString("hosts_last_import", null);
             String last_download = prefs.getString("hosts_last_download", null);
-            if (last_import != null)
-                pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
-            if (last_download != null)
-                //pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));
+            //if (last_import != null)
+                //pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
+            /*if (last_download != null)
+                pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));*/
 
             // Handle hosts import
             // https://github.com/Free-Software-for-Android/AdAway/wiki/HostsSources
-            pref_hosts_import.setEnabled(getIntentOpenHosts().resolveActivity(getPackageManager()) != null);
-            pref_hosts_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            //pref_hosts_import.setEnabled(getIntentOpenHosts().resolveActivity(getPackageManager()) != null);
+            /*pref_hosts_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     startActivityForResult(getIntentOpenHosts(), ActivitySettings.REQUEST_HOSTS);
                     return true;
                 }
-            });
+            });*/
 
             // Handle hosts file download
             //pref_hosts_url.setSummary(pref_hosts_url.getText());
