@@ -256,7 +256,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         // Hosts file settings
         Preference pref_block_domains = screen.findPreference("use_hosts");
         Preference pref_hosts_import = screen.findPreference("hosts_import");
-        EditTextPreference pref_hosts_url = (EditTextPreference) screen.findPreference("hosts_url");
+        //EditTextPreference pref_hosts_url = (EditTextPreference) screen.findPreference("hosts_url");
         //final Preference pref_hosts_download = screen.findPreference("hosts_download");
 
         if (Util.isPlayStoreInstall(this)) {
@@ -264,7 +264,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             cat_advanced.removePreference(pref_block_domains);
             cat_advanced.removePreference(pref_forwarding);
             cat_backup.removePreference(pref_hosts_import);
-            cat_backup.removePreference(pref_hosts_url);
+            //cat_backup.removePreference(pref_hosts_url);
             //cat_backup.removePreference(pref_hosts_download);
 
         } else {
@@ -289,7 +289,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             });
 
             // Handle hosts file download
-            pref_hosts_url.setSummary(pref_hosts_url.getText());
+            //pref_hosts_url.setSummary(pref_hosts_url.getText());
             /*pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
