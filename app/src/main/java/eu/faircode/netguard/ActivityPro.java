@@ -71,8 +71,8 @@ public class ActivityPro extends AppCompatActivity {
         updateState();
 
         TextView tvLogTitle = (TextView) findViewById(R.id.tvLogTitle);
-        TextView tvFilterTitle = (TextView) findViewById(R.id.tvFilterTitle);
-        TextView tvNotifyTitle = (TextView) findViewById(R.id.tvNotifyTitle);
+        //TextView tvFilterTitle = (TextView) findViewById(R.id.tvFilterTitle);
+        //TextView tvNotifyTitle = (TextView) findViewById(R.id.tvNotifyTitle);
         //TextView tvSpeedTitle = (TextView) findViewById(R.id.tvSpeedTitle);
         //TextView tvThemeTitle = (TextView) findViewById(R.id.tvThemeTitle);
         //TextView tvAllTitle = (TextView) findViewById(R.id.tvAllTitle);
@@ -85,8 +85,8 @@ public class ActivityPro extends AppCompatActivity {
         };
 
         Linkify.addLinks(tvLogTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_LOG, null, filter);
-        Linkify.addLinks(tvFilterTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_FILTER, null, filter);
-        Linkify.addLinks(tvNotifyTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_NOTIFY, null, filter);
+        //Linkify.addLinks(tvFilterTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_FILTER, null, filter);
+        //Linkify.addLinks(tvNotifyTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_NOTIFY, null, filter);
         //Linkify.addLinks(tvSpeedTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_SPEED, null, filter);
         //Linkify.addLinks(tvThemeTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_THEME, null, filter);
         //Linkify.addLinks(tvAllTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_PRO1, null, filter);
@@ -145,10 +145,10 @@ public class ActivityPro extends AppCompatActivity {
                                     PendingIntent pi = null;
                                     if (view == btnLog)
                                         pi = iab.getBuyIntent(SKU_LOG);
-                                    else if (view == btnFilter)
-                                        pi = iab.getBuyIntent(SKU_FILTER);
-                                    else if (view == btnNotify)
-                                        pi = iab.getBuyIntent(SKU_NOTIFY);
+                                    /*else if (view == btnFilter)
+                                        pi = iab.getBuyIntent(SKU_FILTER);*/
+                                    /*else if (view == btnNotify)
+                                        pi = iab.getBuyIntent(SKU_NOTIFY);*/
                                     /*else if (view == btnSpeed)
                                         pi = iab.getBuyIntent(SKU_SPEED);*/
                                     /*else if (view == btnTheme)
@@ -217,14 +217,14 @@ public class ActivityPro extends AppCompatActivity {
                     IAB.setBought(SKU_LOG, this);
                     updateState();
                     break;
-                case R.id.btnFilter:
+                /*case R.id.btnFilter:
                     IAB.setBought(SKU_FILTER, this);
                     updateState();
-                    break;
-                case R.id.btnNotify:
+                    break;*/
+                /*case R.id.btnNotify:
                     IAB.setBought(SKU_NOTIFY, this);
                     updateState();
-                    break;
+                    break;*/
                 /*case R.id.btnSpeed:
                     IAB.setBought(SKU_SPEED, this);
                     updateState();
@@ -257,15 +257,15 @@ public class ActivityPro extends AppCompatActivity {
         LinearLayout llChallenge = (LinearLayout) findViewById(R.id.llChallenge);
 
         btnLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.GONE : View.VISIBLE);
-        btnFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.GONE : View.VISIBLE);
-        btnNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.GONE : View.VISIBLE);
+        //btnFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.GONE : View.VISIBLE);
+        //btnNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.GONE : View.VISIBLE);
         //btnSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.GONE : View.VISIBLE);
         //btnTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.GONE : View.VISIBLE);
         //btnAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.GONE : View.VISIBLE);
 
         tvLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.VISIBLE : View.GONE);
-        tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
-        tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
+        //tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
+        //tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
         //tvSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.VISIBLE : View.GONE);
         //tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
         //tvAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.VISIBLE : View.GONE);

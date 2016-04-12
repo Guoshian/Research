@@ -62,14 +62,14 @@
             android:minHeight="?android:attr/listPreferredItemHeightSmall"
             android:orientation="horizontal">
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/tvFilterTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="2"
                 android:text="@string/title_pro_filter"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall" />-->
 
             <Button
                 android:id="@+id/btnFilter"
@@ -100,14 +100,14 @@
             android:minHeight="?android:attr/listPreferredItemHeightSmall"
             android:orientation="horizontal">
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/tvNotifyTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="2"
                 android:text="@string/title_pro_notify"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall" />-->
 
             <Button
                 android:id="@+id/btnNotify"

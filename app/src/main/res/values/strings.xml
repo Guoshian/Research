@@ -212,8 +212,8 @@ Your internet traffic is not being sent to a remote VPN server.</string>
     <string name="title_pro">Pro features</string>
     <string name="title_pro_description">The following pro features are available:</string>
     <string name="title_pro_log">View blocked traffic log</string>
-    <string name="title_pro_filter">Filter network traffic</string>
-    <string name="title_pro_notify">New application notifications</string>
+    <!--<string name="title_pro_filter">Filter network traffic</string>-->
+    <!--<string name="title_pro_notify">New application notifications</string>-->
     <!--<string name="title_pro_speed">Network speed graph notification</string>-->
     <!--<string name="title_pro_theme">Appearance (theme, colors)</string>-->
     <!--<string name="title_pro_all">All above pro features</string>-->

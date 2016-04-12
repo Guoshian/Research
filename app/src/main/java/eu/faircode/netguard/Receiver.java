@@ -44,7 +44,7 @@ public class Receiver extends BroadcastReceiver {
         Log.i(TAG, "Received " + intent);
         Util.logExtras(intent);
 
-        if (Intent.ACTION_PACKAGE_ADDED.equals(intent.getAction())) {
+        /*if (Intent.ACTION_PACKAGE_ADDED.equals(intent.getAction())) {
             // Application added
             if (!intent.getBooleanExtra(Intent.EXTRA_REPLACING, false)) {
                 // Show notification
@@ -54,7 +54,7 @@ public class Receiver extends BroadcastReceiver {
                 }
             }
 
-        } else if (Intent.ACTION_PACKAGE_REMOVED.equals(intent.getAction())) {
+        } else */if (Intent.ACTION_PACKAGE_REMOVED.equals(intent.getAction())) {
             // Application removed
             Rule.clearCache(context);
 
