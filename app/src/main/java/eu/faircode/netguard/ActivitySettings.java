@@ -1264,10 +1264,10 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                     else {
                         if (current == application) {
                             // Pro features
-                            if ("log".equals(key)) {
+                            /*if ("log".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_LOG, context))
                                     return;
-                            } /*else if ("theme".equals(key)) {
+                            } *//*else if ("theme".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_THEME, context))
                                     return;
                             }*/ /*else if ("show_stats".equals(key)) {

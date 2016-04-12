@@ -336,8 +336,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                     try {
                         iab.updatePurchases();
 
-                        if (!IAB.isPurchased(ActivityPro.SKU_LOG, ActivityMain.this))
-                            prefs.edit().putBoolean("log", false).apply();
+                       /* if (!IAB.isPurchased(ActivityPro.SKU_LOG, ActivityMain.this))
+                            prefs.edit().putBoolean("log", false).apply();*/
                         /*if (!IAB.isPurchased(ActivityPro.SKU_THEME, ActivityMain.this)) {
                             if (!"teal".equals(prefs.getString("theme", "teal")))
                                 prefs.edit().putString("theme", "teal").apply();
@@ -803,10 +803,10 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 return true;
 
             case R.id.menu_log:
-                if (IAB.isPurchased(ActivityPro.SKU_LOG, this))
+                //if (IAB.isPurchased(ActivityPro.SKU_LOG, this))
                     startActivity(new Intent(this, ActivityLog.class));
-                else
-                    startActivity(new Intent(this, ActivityPro.class));
+                //else
+                 //   startActivity(new Intent(this, ActivityPro.class));
                 return true;
 
             case R.id.menu_settings:

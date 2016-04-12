@@ -70,7 +70,7 @@ public class ActivityPro extends AppCompatActivity {
         // Initial state
         updateState();
 
-        TextView tvLogTitle = (TextView) findViewById(R.id.tvLogTitle);
+        //TextView tvLogTitle = (TextView) findViewById(R.id.tvLogTitle);
         //TextView tvFilterTitle = (TextView) findViewById(R.id.tvFilterTitle);
         //TextView tvNotifyTitle = (TextView) findViewById(R.id.tvNotifyTitle);
         //TextView tvSpeedTitle = (TextView) findViewById(R.id.tvSpeedTitle);
@@ -84,7 +84,7 @@ public class ActivityPro extends AppCompatActivity {
             }
         };
 
-        Linkify.addLinks(tvLogTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_LOG, null, filter);
+        //Linkify.addLinks(tvLogTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_LOG, null, filter);
         //Linkify.addLinks(tvFilterTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_FILTER, null, filter);
         //Linkify.addLinks(tvNotifyTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_NOTIFY, null, filter);
         //Linkify.addLinks(tvSpeedTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_SPEED, null, filter);
@@ -248,12 +248,12 @@ public class ActivityPro extends AppCompatActivity {
         //Button btnSpeed = (Button) findViewById(R.id.btnSpeed);
         //Button btnTheme = (Button) findViewById(R.id.btnTheme);
         //Button btnAll = (Button) findViewById(R.id.btnAll);
-        TextView tvLog = (TextView) findViewById(R.id.tvLog);
-        TextView tvFilter = (TextView) findViewById(R.id.tvFilter);
-        TextView tvNotify = (TextView) findViewById(R.id.tvNotify);
-        TextView tvSpeed = (TextView) findViewById(R.id.tvSpeed);
-        TextView tvTheme = (TextView) findViewById(R.id.tvTheme);
-        TextView tvAll = (TextView) findViewById(R.id.tvAll);
+        //TextView tvLog = (TextView) findViewById(R.id.tvLog);
+        //TextView tvFilter = (TextView) findViewById(R.id.tvFilter);
+        //TextView tvNotify = (TextView) findViewById(R.id.tvNotify);
+        //TextView tvSpeed = (TextView) findViewById(R.id.tvSpeed);
+        //TextView tvTheme = (TextView) findViewById(R.id.tvTheme);
+        //TextView tvAll = (TextView) findViewById(R.id.tvAll);
         LinearLayout llChallenge = (LinearLayout) findViewById(R.id.llChallenge);
 
         //btnLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.GONE : View.VISIBLE);
@@ -263,12 +263,12 @@ public class ActivityPro extends AppCompatActivity {
         //btnTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.GONE : View.VISIBLE);
         //btnAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.GONE : View.VISIBLE);
 
-        tvLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.VISIBLE : View.GONE);
-        tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
-        tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
-        tvSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.VISIBLE : View.GONE);
-        tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
-        tvAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.VISIBLE : View.GONE);
+        //tvLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.VISIBLE : View.GONE);
+        //tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
+        //tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
+        //tvSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.VISIBLE : View.GONE);
+        //tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
+        //tvAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.VISIBLE : View.GONE);
 
         llChallenge.setVisibility(
                 IAB.isPurchased(SKU_DONATION, this) || Util.isPlayStoreInstall(this)
