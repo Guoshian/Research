@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <!--<TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_pro_description"
-            android:textAppearance="@style/TextMedium" />
+            android:textAppearance="@style/TextMedium" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
