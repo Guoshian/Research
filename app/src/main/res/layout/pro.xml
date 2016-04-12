@@ -33,7 +33,7 @@
                 android:text="@string/title_pro_log"
                 android:textAppearance="@style/TextSmall" />
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnLog"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:text="@string/title_pro_buy"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
             <TextView
                 android:id="@+id/tvLog"

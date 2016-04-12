@@ -131,20 +131,20 @@ public class ActivityPro extends AppCompatActivity {
                         iab.updatePurchases();
                         updateState();
 
-                        final Button btnLog = (Button) findViewById(R.id.btnLog);
-                        final Button btnFilter = (Button) findViewById(R.id.btnFilter);
-                        final Button btnNotify = (Button) findViewById(R.id.btnNotify);
-                        final Button btnSpeed = (Button) findViewById(R.id.btnSpeed);
-                        final Button btnTheme = (Button) findViewById(R.id.btnTheme);
-                        final Button btnAll = (Button) findViewById(R.id.btnAll);
+                        //final Button btnLog = (Button) findViewById(R.id.btnLog);
+                        //final Button btnFilter = (Button) findViewById(R.id.btnFilter);
+                        //final Button btnNotify = (Button) findViewById(R.id.btnNotify);
+                        //final Button btnSpeed = (Button) findViewById(R.id.btnSpeed);
+                        ///final Button btnTheme = (Button) findViewById(R.id.btnTheme);
+                        //final Button btnAll = (Button) findViewById(R.id.btnAll);
 
                         View.OnClickListener listener = new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 try {
-                                    PendingIntent pi = null;
-                                    if (view == btnLog)
-                                        pi = iab.getBuyIntent(SKU_LOG);
+                                    //PendingIntent pi = null;
+                                    /*if (view == btnLog)
+                                        pi = iab.getBuyIntent(SKU_LOG);*/
                                     /*else if (view == btnFilter)
                                         pi = iab.getBuyIntent(SKU_FILTER);*/
                                     /*else if (view == btnNotify)
@@ -156,8 +156,8 @@ public class ActivityPro extends AppCompatActivity {
                                     /*else if (view == btnAll)
                                         pi = iab.getBuyIntent(SKU_PRO1);*/
 
-                                    if (pi != null)
-                                        startIntentSenderForResult(pi.getIntentSender(), view.getId(), new Intent(), 0, 0, 0);
+                                    //if (pi != null)
+                                    //    startIntentSenderForResult(pi.getIntentSender(), view.getId(), new Intent(), 0, 0, 0);
                                 } catch (Throwable ex) {
                                     Log.i(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
                                     Util.sendCrashReport(ex, ActivityPro.this);
@@ -165,19 +165,19 @@ public class ActivityPro extends AppCompatActivity {
                             }
                         };
 
-                        btnLog.setOnClickListener(listener);
-                        btnFilter.setOnClickListener(listener);
-                        btnNotify.setOnClickListener(listener);
-                        btnSpeed.setOnClickListener(listener);
-                        btnTheme.setOnClickListener(listener);
-                        btnAll.setOnClickListener(listener);
+                       // btnLog.setOnClickListener(listener);
+                       // btnFilter.setOnClickListener(listener);
+                       // btnNotify.setOnClickListener(listener);
+                       // btnSpeed.setOnClickListener(listener);
+                       // btnTheme.setOnClickListener(listener);
+                       // btnAll.setOnClickListener(listener);
 
-                        btnLog.setEnabled(true);
-                        btnFilter.setEnabled(true);
-                        btnNotify.setEnabled(true);
-                        btnSpeed.setEnabled(true);
-                        btnTheme.setEnabled(true);
-                        btnAll.setEnabled(true);
+                       // btnLog.setEnabled(true);
+                        //btnFilter.setEnabled(true);
+                        //btnNotify.setEnabled(true);
+                        //btnSpeed.setEnabled(true);
+                        //btnTheme.setEnabled(true);
+                        // btnAll.setEnabled(true);
 
                     } catch (Throwable ex) {
                         Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
@@ -213,10 +213,10 @@ public class ActivityPro extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
-                case R.id.btnLog:
+                /*case R.id.btnLog:
                     IAB.setBought(SKU_LOG, this);
                     updateState();
-                    break;
+                    break;*/
                 /*case R.id.btnFilter:
                     IAB.setBought(SKU_FILTER, this);
                     updateState();
@@ -242,12 +242,12 @@ public class ActivityPro extends AppCompatActivity {
     }
 
     private void updateState() {
-        Button btnLog = (Button) findViewById(R.id.btnLog);
-        Button btnFilter = (Button) findViewById(R.id.btnFilter);
-        Button btnNotify = (Button) findViewById(R.id.btnNotify);
-        Button btnSpeed = (Button) findViewById(R.id.btnSpeed);
-        Button btnTheme = (Button) findViewById(R.id.btnTheme);
-        Button btnAll = (Button) findViewById(R.id.btnAll);
+       // Button btnLog = (Button) findViewById(R.id.btnLog);
+        //Button btnFilter = (Button) findViewById(R.id.btnFilter);
+        //Button btnNotify = (Button) findViewById(R.id.btnNotify);
+        //Button btnSpeed = (Button) findViewById(R.id.btnSpeed);
+        //Button btnTheme = (Button) findViewById(R.id.btnTheme);
+        //Button btnAll = (Button) findViewById(R.id.btnAll);
         TextView tvLog = (TextView) findViewById(R.id.tvLog);
         TextView tvFilter = (TextView) findViewById(R.id.tvFilter);
         TextView tvNotify = (TextView) findViewById(R.id.tvNotify);
@@ -256,7 +256,7 @@ public class ActivityPro extends AppCompatActivity {
         TextView tvAll = (TextView) findViewById(R.id.tvAll);
         LinearLayout llChallenge = (LinearLayout) findViewById(R.id.llChallenge);
 
-        btnLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.GONE : View.VISIBLE);
+        //btnLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.GONE : View.VISIBLE);
         //btnFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.GONE : View.VISIBLE);
         //btnNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.GONE : View.VISIBLE);
         //btnSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.GONE : View.VISIBLE);
