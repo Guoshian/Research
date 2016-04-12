@@ -197,7 +197,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
 
   <string name="title_pro">專業版功能</string>
   <string name="title_pro_description">The following pro features are available:</string>
-  <string name="title_pro_log">檢視阻擋流量紀錄</string>
+  <!--<string name="title_pro_log">檢視阻擋流量紀錄</string>-->
   <!--<string name="title_pro_filter">Filter network traffic</string>-->
   <!--<string name="title_pro_notify">新App通知</string>-->
   <!--<string name="title_pro_speed">網路速度圖通知</string>-->
