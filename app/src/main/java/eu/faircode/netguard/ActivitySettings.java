@@ -128,7 +128,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
 
         PreferenceCategory cat_options = (PreferenceCategory) screen.findPreference("category_options");
         PreferenceCategory cat_advanced = (PreferenceCategory) screen.findPreference("category_advanced_options");
-        PreferenceCategory cat_backup = (PreferenceCategory) screen.findPreference("category_backup");
+        //PreferenceCategory cat_backup = (PreferenceCategory) screen.findPreference("category_backup");
         PreferenceCategory cat_development = (PreferenceCategory) screen.findPreference("category_development");
 
         // Handle auto enable
