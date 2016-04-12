@@ -62,7 +62,7 @@ public class ActivityPro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pro);
 
-        getSupportActionBar().setTitle(R.string.title_pro);
+        //getSupportActionBar().setTitle(R.string.title_pro);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
