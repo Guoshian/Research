@@ -122,14 +122,14 @@ public class ActivityPro extends AppCompatActivity {
             Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
         }*/
 
-        try {
-            iab = new IAB(new IAB.Delegate() {
-                @Override
-                public void onReady(final IAB iab) {
-                    Log.i(TAG, "IAB ready");
-                    try {
-                        iab.updatePurchases();
-                        updateState();
+        //try {
+            //iab = new IAB(new IAB.Delegate() {
+                //@Override
+                //public void onReady(final IAB iab) {
+                   // Log.i(TAG, "IAB ready");
+                    //try {
+                    //    iab.updatePurchases();
+                     //   updateState();
 
                         //final Button btnLog = (Button) findViewById(R.id.btnLog);
                         //final Button btnFilter = (Button) findViewById(R.id.btnFilter);
@@ -138,10 +138,10 @@ public class ActivityPro extends AppCompatActivity {
                         ///final Button btnTheme = (Button) findViewById(R.id.btnTheme);
                         //final Button btnAll = (Button) findViewById(R.id.btnAll);
 
-                        View.OnClickListener listener = new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                try {
+                        //View.OnClickListener listener = new View.OnClickListener() {
+                        //    @Override
+                         //   public void onClick(View view) {
+                          //      try {
                                     //PendingIntent pi = null;
                                     /*if (view == btnLog)
                                         pi = iab.getBuyIntent(SKU_LOG);*/
@@ -158,12 +158,12 @@ public class ActivityPro extends AppCompatActivity {
 
                                     //if (pi != null)
                                     //    startIntentSenderForResult(pi.getIntentSender(), view.getId(), new Intent(), 0, 0, 0);
-                                } catch (Throwable ex) {
-                                    Log.i(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-                                    Util.sendCrashReport(ex, ActivityPro.this);
-                                }
-                            }
-                        };
+                          //      } catch (Throwable ex) {
+                          //          Log.i(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
+                          //          Util.sendCrashReport(ex, ActivityPro.this);
+                          //      }
+                          //  }
+                        //};
 
                        // btnLog.setOnClickListener(listener);
                        // btnFilter.setOnClickListener(listener);
@@ -179,15 +179,15 @@ public class ActivityPro extends AppCompatActivity {
                         //btnTheme.setEnabled(true);
                         // btnAll.setEnabled(true);
 
-                    } catch (Throwable ex) {
-                        Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-                    }
-                }
-            }, this);
-            iab.bind();
-        } catch (Throwable ex) {
-            Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-        }
+                 //   } catch (Throwable ex) {
+                 //       Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
+                //    }
+                //}
+           // }, this);
+            //iab.bind();
+        //} catch (Throwable ex) {
+        //    Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
+        //}
     }
 
     @Override

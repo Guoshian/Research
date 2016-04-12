@@ -66,7 +66,7 @@
                 android:value=".ActivityMain" />
         </activity>
 
-        <activity
+        <!--<activity
             android:name=".ActivityPro"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_pro"
@@ -74,7 +74,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ActivityMain" />
-        </activity>
+        </activity>-->
 
         <activity
             android:name=".ActivityDns"
