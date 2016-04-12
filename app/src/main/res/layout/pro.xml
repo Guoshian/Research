@@ -214,14 +214,14 @@
             android:minHeight="?android:attr/listPreferredItemHeightSmall"
             android:orientation="horizontal">
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/tvAllTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="2"
                 android:text="@string/title_pro_all"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall" />-->
 
             <Button
                 android:id="@+id/btnAll"
