@@ -71,7 +71,7 @@
                 android:text="@string/title_pro_filter"
                 android:textAppearance="@style/TextSmall" />-->
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnFilter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:text="@string/title_pro_buy"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
             <TextView
                 android:id="@+id/tvFilter"
@@ -109,7 +109,7 @@
                 android:text="@string/title_pro_notify"
                 android:textAppearance="@style/TextSmall" />-->
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnNotify"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:text="@string/title_pro_buy"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
             <TextView
                 android:id="@+id/tvNotify"
@@ -147,7 +147,7 @@
                 android:text="@string/title_pro_speed"
                 android:textAppearance="@style/TextSmall" />-->
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnSpeed"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:text="@string/title_pro_buy"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
             <TextView
                 android:id="@+id/tvSpeed"
@@ -185,7 +185,7 @@
                 android:text="@string/title_pro_theme"
                 android:textAppearance="@style/TextSmall" />-->
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnTheme"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:text="@string/title_pro_buy"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
             <TextView
                 android:id="@+id/tvTheme"
@@ -223,7 +223,7 @@
                 android:text="@string/title_pro_all"
                 android:textAppearance="@style/TextSmall" />-->
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnAll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:text="@string/title_pro_buy"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
             <TextView
                 android:id="@+id/tvAll"

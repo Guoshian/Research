@@ -264,11 +264,11 @@ public class ActivityPro extends AppCompatActivity {
         //btnAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.GONE : View.VISIBLE);
 
         tvLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.VISIBLE : View.GONE);
-        //tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
-        //tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
-        //tvSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.VISIBLE : View.GONE);
-        //tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
-        //tvAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.VISIBLE : View.GONE);
+        tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
+        tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
+        tvSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.VISIBLE : View.GONE);
+        tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
+        tvAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.VISIBLE : View.GONE);
 
         llChallenge.setVisibility(
                 IAB.isPurchased(SKU_DONATION, this) || Util.isPlayStoreInstall(this)
