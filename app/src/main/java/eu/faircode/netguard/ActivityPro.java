@@ -92,11 +92,11 @@ public class ActivityPro extends AppCompatActivity {
         //Linkify.addLinks(tvAllTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_PRO1, null, filter);
 
         // Challenge
-        TextView tvChallenge = (TextView) findViewById(R.id.tvChallenge);
-        tvChallenge.setText(Build.SERIAL);
+        //TextView tvChallenge = (TextView) findViewById(R.id.tvChallenge);
+        //tvChallenge.setText(Build.SERIAL);
 
         // Response
-        try {
+        /*try {
             final String response = Util.md5(Build.SERIAL, "NetGuard");
             EditText etResponse = (EditText) findViewById(R.id.etResponse);
             etResponse.addTextChangedListener(new TextWatcher() {
@@ -120,7 +120,7 @@ public class ActivityPro extends AppCompatActivity {
             });
         } catch (Throwable ex) {
             Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
-        }
+        }*/
 
         try {
             iab = new IAB(new IAB.Delegate() {

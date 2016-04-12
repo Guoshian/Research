@@ -252,7 +252,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -266,9 +266,9 @@
                 android:text="@string/title_pro_challenge"
                 android:textAppearance="@style/TextMedium"
                 android:textIsSelectable="true"
-                android:textStyle="bold" />
+                android:textStyle="bold" />-->
 
-            <TextView
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -279,7 +279,7 @@
                 android:id="@+id/etResponse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="text" />-->
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
