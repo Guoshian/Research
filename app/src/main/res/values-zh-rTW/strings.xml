@@ -88,12 +88,14 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_stats_top">顯示最高使用量Apps</string>
   <string name="setting_stats_frequency">取樣間隔: %s ms</string>
   <string name="setting_stats_samples">取樣數: %s s</string>
+
   <string name="setting_backup">備份</string>
   <string name="setting_export">輸出設定</string>
   <string name="setting_import">輸入設定</string>
   <string name="setting_hosts">Import hosts file</string>
   <string name="setting_hosts_url">Hosts file download URL</string>
-  <string name="setting_hosts_download">Download hosts file</string>
+  <!--<string name="setting_hosts_download">Download hosts file</string>-->
+
   <string name="setting_technical">資訊</string>
   <string name="setting_technical_general">General</string>
   <string name="setting_technical_networks">Networks</string>

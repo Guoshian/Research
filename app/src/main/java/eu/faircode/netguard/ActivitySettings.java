@@ -257,7 +257,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         Preference pref_block_domains = screen.findPreference("use_hosts");
         Preference pref_hosts_import = screen.findPreference("hosts_import");
         EditTextPreference pref_hosts_url = (EditTextPreference) screen.findPreference("hosts_url");
-        final Preference pref_hosts_download = screen.findPreference("hosts_download");
+        //final Preference pref_hosts_download = screen.findPreference("hosts_download");
 
         if (Util.isPlayStoreInstall(this)) {
             cat_options.removePreference(screen.findPreference("update_check"));
@@ -265,7 +265,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             cat_advanced.removePreference(pref_forwarding);
             cat_backup.removePreference(pref_hosts_import);
             cat_backup.removePreference(pref_hosts_url);
-            cat_backup.removePreference(pref_hosts_download);
+            //cat_backup.removePreference(pref_hosts_download);
 
         } else {
             pref_block_domains.setEnabled(new File(getFilesDir(), "hosts.txt").exists());
@@ -275,7 +275,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             if (last_import != null)
                 pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
             if (last_download != null)
-                pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));
+                //pref_hosts_download.setSummary(getString(R.string.msg_download_last, last_download));
 
             // Handle hosts import
             // https://github.com/Free-Software-for-Android/AdAway/wiki/HostsSources
@@ -290,7 +290,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
 
             // Handle hosts file download
             pref_hosts_url.setSummary(pref_hosts_url.getText());
-            pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            /*pref_hosts_download.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     final File tmp = new File(getFilesDir(), "hosts.tmp");
@@ -309,7 +309,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
 
                                 if (running) {
                                     getPreferenceScreen().findPreference("use_hosts").setEnabled(true);
-                                    pref_hosts_download.setSummary(getString(R.string.msg_download_last, last));
+                                   // pref_hosts_download.setSummary(getString(R.string.msg_download_last, last));
                                     Toast.makeText(ActivitySettings.this, R.string.msg_downloaded, Toast.LENGTH_LONG).show();
                                 }
 
@@ -336,7 +336,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                     }
                     return true;
                 }
-            });
+            });*/
         }
 
         // Development
