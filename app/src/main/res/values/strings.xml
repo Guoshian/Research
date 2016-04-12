@@ -97,7 +97,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
 
     <string name="setting_backup">Backup</string>
     <string name="setting_export">Export settings</string>
-    <string name="setting_import">Import settings</string>
+    <!--<string name="setting_import">Import settings</string>-->
     <!--<string name="setting_hosts">Import hosts file</string>-->
     <!--<string name="setting_hosts_url">Hosts file download URL</string>-->
     <!--<string name="setting_hosts_download">Download hosts file</string>-->

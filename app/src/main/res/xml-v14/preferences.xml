@@ -195,9 +195,9 @@
         <Preference
             android:key="export"
             android:title="@string/setting_export" />
-        <Preference
+        <!--<Preference
             android:key="import"
-            android:title="@string/setting_import" />
+            android:title="@string/setting_import" />-->
         <!--<Preference
             android:dependency="filter"
             android:key="hosts_import"

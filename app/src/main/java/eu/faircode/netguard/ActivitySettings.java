@@ -243,15 +243,15 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         });
 
         // Handle import
-        Preference pref_import = screen.findPreference("import");
-        pref_import.setEnabled(getIntentOpenExport().resolveActivity(getPackageManager()) != null);
-        pref_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        //Preference pref_import = screen.findPreference("import");
+        //pref_import.setEnabled(getIntentOpenExport().resolveActivity(getPackageManager()) != null);
+        /*pref_import.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 startActivityForResult(getIntentOpenExport(), ActivitySettings.REQUEST_IMPORT);
                 return true;
             }
-        });
+        });*/
 
         // Hosts file settings
         Preference pref_block_domains = screen.findPreference("use_hosts");
