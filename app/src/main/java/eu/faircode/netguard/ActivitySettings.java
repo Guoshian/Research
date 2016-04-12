@@ -449,14 +449,15 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
     @TargetApi(Build.VERSION_CODES.M)
     public void onSharedPreferenceChanged(SharedPreferences prefs, String name) {
         // Pro features
-        if ("theme".equals(name)) {
+        /*if ("theme".equals(name)) {
             if (!"teal".equals(prefs.getString(name, "teal")) && !IAB.isPurchased(ActivityPro.SKU_THEME, this)) {
                 prefs.edit().putString(name, "teal").apply();
                 ((ListPreference) getPreferenceScreen().findPreference(name)).setValue("teal");
                 startActivity(new Intent(this, ActivityPro.class));
                 return;
             }
-        } else if ("show_stats".equals(name)) {
+        } else*/
+        if ("show_stats".equals(name)) {
             if (prefs.getBoolean(name, false) && !IAB.isPurchased(ActivityPro.SKU_SPEED, this)) {
                 prefs.edit().putBoolean(name, false).apply();
                 ((TwoStatePreference) getPreferenceScreen().findPreference(name)).setChecked(false);
@@ -1266,10 +1267,10 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                             if ("log".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_LOG, context))
                                     return;
-                            } else if ("theme".equals(key)) {
+                            } /*else if ("theme".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_THEME, context))
                                     return;
-                            } else if ("show_stats".equals(key)) {
+                            }*/ else if ("show_stats".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_SPEED, context))
                                     return;
                             }

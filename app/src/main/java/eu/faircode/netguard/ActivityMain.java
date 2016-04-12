@@ -338,10 +338,10 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
 
                         if (!IAB.isPurchased(ActivityPro.SKU_LOG, ActivityMain.this))
                             prefs.edit().putBoolean("log", false).apply();
-                        if (!IAB.isPurchased(ActivityPro.SKU_THEME, ActivityMain.this)) {
+                        /*if (!IAB.isPurchased(ActivityPro.SKU_THEME, ActivityMain.this)) {
                             if (!"teal".equals(prefs.getString("theme", "teal")))
                                 prefs.edit().putString("theme", "teal").apply();
-                        }
+                        }*/
                         if (!IAB.isPurchased(ActivityPro.SKU_SPEED, ActivityMain.this))
                             prefs.edit().putBoolean("show_stats", false).apply();
                     } catch (Throwable ex) {

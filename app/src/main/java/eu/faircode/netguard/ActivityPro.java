@@ -74,7 +74,7 @@ public class ActivityPro extends AppCompatActivity {
         TextView tvFilterTitle = (TextView) findViewById(R.id.tvFilterTitle);
         TextView tvNotifyTitle = (TextView) findViewById(R.id.tvNotifyTitle);
         TextView tvSpeedTitle = (TextView) findViewById(R.id.tvSpeedTitle);
-        TextView tvThemeTitle = (TextView) findViewById(R.id.tvThemeTitle);
+        //TextView tvThemeTitle = (TextView) findViewById(R.id.tvThemeTitle);
         TextView tvAllTitle = (TextView) findViewById(R.id.tvAllTitle);
 
         Linkify.TransformFilter filter = new Linkify.TransformFilter() {
@@ -88,7 +88,7 @@ public class ActivityPro extends AppCompatActivity {
         Linkify.addLinks(tvFilterTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_FILTER, null, filter);
         Linkify.addLinks(tvNotifyTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_NOTIFY, null, filter);
         Linkify.addLinks(tvSpeedTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_SPEED, null, filter);
-        Linkify.addLinks(tvThemeTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_THEME, null, filter);
+        //Linkify.addLinks(tvThemeTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_THEME, null, filter);
         Linkify.addLinks(tvAllTitle, Pattern.compile(".*"), "http://www.netguard.me/#" + SKU_PRO1, null, filter);
 
         // Challenge
@@ -151,8 +151,8 @@ public class ActivityPro extends AppCompatActivity {
                                         pi = iab.getBuyIntent(SKU_NOTIFY);
                                     else if (view == btnSpeed)
                                         pi = iab.getBuyIntent(SKU_SPEED);
-                                    else if (view == btnTheme)
-                                        pi = iab.getBuyIntent(SKU_THEME);
+                                    /*else if (view == btnTheme)
+                                        pi = iab.getBuyIntent(SKU_THEME);*/
                                     else if (view == btnAll)
                                         pi = iab.getBuyIntent(SKU_PRO1);
 
@@ -229,10 +229,10 @@ public class ActivityPro extends AppCompatActivity {
                     IAB.setBought(SKU_SPEED, this);
                     updateState();
                     break;
-                case R.id.btnTheme:
+                /*case R.id.btnTheme:
                     IAB.setBought(SKU_THEME, this);
                     updateState();
-                    break;
+                    break;*/
                 case R.id.btnAll:
                     IAB.setBought(SKU_PRO1, this);
                     updateState();
@@ -260,14 +260,14 @@ public class ActivityPro extends AppCompatActivity {
         btnFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.GONE : View.VISIBLE);
         btnNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.GONE : View.VISIBLE);
         btnSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.GONE : View.VISIBLE);
-        btnTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.GONE : View.VISIBLE);
+        //btnTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.GONE : View.VISIBLE);
         btnAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.GONE : View.VISIBLE);
 
         tvLog.setVisibility(IAB.isPurchased(SKU_LOG, this) ? View.VISIBLE : View.GONE);
         tvFilter.setVisibility(IAB.isPurchased(SKU_FILTER, this) ? View.VISIBLE : View.GONE);
         tvNotify.setVisibility(IAB.isPurchased(SKU_NOTIFY, this) ? View.VISIBLE : View.GONE);
         tvSpeed.setVisibility(IAB.isPurchased(SKU_SPEED, this) ? View.VISIBLE : View.GONE);
-        tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
+        //tvTheme.setVisibility(IAB.isPurchased(SKU_THEME, this) ? View.VISIBLE : View.GONE);
         tvAll.setVisibility(IAB.isPurchased(SKU_PRO1, this) ? View.VISIBLE : View.GONE);
 
         llChallenge.setVisibility(
