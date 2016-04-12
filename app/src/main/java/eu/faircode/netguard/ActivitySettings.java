@@ -456,15 +456,15 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 startActivity(new Intent(this, ActivityPro.class));
                 return;
             }
-        } else*/
-        if ("show_stats".equals(name)) {
+        }
+        /*else if ("show_stats".equals(name)) {
             if (prefs.getBoolean(name, false) && !IAB.isPurchased(ActivityPro.SKU_SPEED, this)) {
                 prefs.edit().putBoolean(name, false).apply();
                 ((TwoStatePreference) getPreferenceScreen().findPreference(name)).setChecked(false);
                 startActivity(new Intent(this, ActivityPro.class));
                 return;
             }
-        }
+        }*/
 
         Object value = prefs.getAll().get(name);
         if (value instanceof String && "".equals(value))
@@ -1270,10 +1270,10 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                             } /*else if ("theme".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_THEME, context))
                                     return;
-                            }*/ else if ("show_stats".equals(key)) {
+                            }*/ /*else if ("show_stats".equals(key)) {
                                 if (!IAB.isPurchased(ActivityPro.SKU_SPEED, context))
                                     return;
-                            }
+                            }*/
 
                             if ("hosts_last_import".equals(key) || "hosts_last_download".equals(key))
                                 return;

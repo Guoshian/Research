@@ -342,8 +342,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                             if (!"teal".equals(prefs.getString("theme", "teal")))
                                 prefs.edit().putString("theme", "teal").apply();
                         }*/
-                        if (!IAB.isPurchased(ActivityPro.SKU_SPEED, ActivityMain.this))
-                            prefs.edit().putBoolean("show_stats", false).apply();
+                        /*if (!IAB.isPurchased(ActivityPro.SKU_SPEED, ActivityMain.this))
+                            prefs.edit().putBoolean("show_stats", false).apply();*/
                     } catch (Throwable ex) {
                         Log.e(TAG, ex.toString() + "\n" + Log.getStackTraceString(ex));
                     } finally {
