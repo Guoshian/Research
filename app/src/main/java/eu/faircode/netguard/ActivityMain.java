@@ -727,8 +727,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         if (!Util.hasValidFingerprint(this) || getIntentInvite(this).resolveActivity(getPackageManager()) == null)
             menu.removeItem(R.id.menu_invite);
 
-        if (getIntentSupport().resolveActivity(getPackageManager()) == null)
-            menu.removeItem(R.id.menu_support);
+        /*if (getIntentSupport().resolveActivity(getPackageManager()) == null)
+            menu.removeItem(R.id.menu_support);*/
 
         return true;
     }
@@ -825,9 +825,9 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
                 menu_legend();
                 return true;
 
-            case R.id.menu_support:
+            /*case R.id.menu_support:
                 startActivity(getIntentSupport());
-                return true;
+                return true;*/
 
             /*case R.id.menu_about:
                 menu_about();

@@ -24,8 +24,8 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="menu_settings">設定</string>
   <string name="menu_invite">邀請</string>
   <string name="menu_legend">Legend</string>
-  <string name="menu_support">支援</string>
-  <string name="menu_about">關於</string>
+  <!--ing name="menu_support">支援</string>-->
+  <!--<string name="menu_about">關於</string>-->
 
   <string name="menu_protocol_other">Other</string>
   <string name="menu_traffic_allowed">Allowed</string>
