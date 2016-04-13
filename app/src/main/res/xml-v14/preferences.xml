@@ -25,9 +25,9 @@
             android:title="@string/setting_whitelist_roaming" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="category_options"
-        android:title="@string/setting_options">
+        android:title="@string/setting_options">-->
         <!--<ListPreference
             android:defaultValue="teal"
             android:entries="@array/themeNames"
@@ -52,7 +52,7 @@
             android:key="update_check"
             android:summary="@string/summary_update"
             android:title="@string/setting_update" />-->
-    </PreferenceCategory>
+    <!--</PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="category_options"

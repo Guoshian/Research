@@ -55,7 +55,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
   <string name="setting_screen_other">在螢幕開啟時啟用行動網路</string>
   <string name="setting_whitelist_roaming">阻擋漫遊</string>
 
-  <string name="setting_options">選項</string>
+  <!--<string name="setting_options">選項</string>-->
   <!--<string name="setting_theme">主題: %1$s</string>-->
   <!--<string name="setting_dark">使用深色主題</string>-->
   <!--<string name="setting_auto">在 %1$s 分鐘後自動啟用</string>-->
