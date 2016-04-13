@@ -42,11 +42,11 @@
             android:inputType="number"
             android:key="auto_enable"
             android:summary="@string/summary_auto" />
-        <EditTextPreference
+        <!--<EditTextPreference
             android:defaultValue="0"
             android:inputType="number"
             android:key="screen_delay"
-            android:summary="@string/summary_delay" />
+            android:summary="@string/summary_delay" />-->
         <!--<CheckBoxPreference
             android:defaultValue="true"
             android:key="update_check"
