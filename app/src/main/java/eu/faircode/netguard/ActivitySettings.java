@@ -479,7 +479,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                 "screen_other".equals(name))
             ServiceSinkhole.reload("changed " + name, this);
 
-        else if ("whitelist_roaming".equals(name)) {
+        /*else if ("whitelist_roaming".equals(name)) {
             if (prefs.getBoolean(name, false)) {
                 if (Util.hasPhoneStatePermission(this))
                     ServiceSinkhole.reload("changed " + name, this);
@@ -488,7 +488,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             } else
                 ServiceSinkhole.reload("changed " + name, this);
 
-        } //else if ("auto_enable".equals(name))
+        } *///else if ("auto_enable".equals(name))
             //getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_auto, prefs.getString(name, "0")));
 
         //else if ("screen_delay".equals(name))
@@ -669,13 +669,13 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         // Check if permission was revoked
-        if (prefs.getBoolean("whitelist_roaming", false))
+        /*if (prefs.getBoolean("whitelist_roaming", false))
             if (!Util.hasPhoneStatePermission(this)) {
                 prefs.edit().putBoolean("whitelist_roaming", false).apply();
                 ((TwoStatePreference) screen.findPreference("whitelist_roaming")).setChecked(false);
 
                 requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_ROAMING_INTERNATIONAL);
-            }
+            }*/
 
         // Check if permission was revoked
         if (prefs.getBoolean("unmetered_2g", false))
@@ -735,10 +735,10 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             prefs.edit().putBoolean("national_roaming", granted).apply();
             ((TwoStatePreference) screen.findPreference("national_roaming")).setChecked(granted);
 
-        } else if (requestCode == REQUEST_ROAMING_INTERNATIONAL) {
+        } /*else if (requestCode == REQUEST_ROAMING_INTERNATIONAL) {
             prefs.edit().putBoolean("whitelist_roaming", granted).apply();
             ((TwoStatePreference) screen.findPreference("whitelist_roaming")).setChecked(granted);
-        }
+        }*/
 
         if (granted)
             ServiceSinkhole.reload("permission granted", this);
