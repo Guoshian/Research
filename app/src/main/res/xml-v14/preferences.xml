@@ -15,10 +15,10 @@
             android:defaultValue="false"
             android:key="screen_wifi"
             android:title="@string/setting_screen_wifi" />
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="screen_other"
-            android:title="@string/setting_screen_other" />
+            android:title="@string/setting_screen_other" />-->
         <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="whitelist_roaming"
