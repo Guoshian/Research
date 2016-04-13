@@ -132,8 +132,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         PreferenceCategory cat_development = (PreferenceCategory) screen.findPreference("category_development");
 
         // Handle auto enable
-        Preference pref_auto_enable = screen.findPreference("auto_enable");
-        pref_auto_enable.setTitle(getString(R.string.setting_auto, prefs.getString("auto_enable", "0")));
+        //Preference pref_auto_enable = screen.findPreference("auto_enable");
+        //pref_auto_enable.setTitle(getString(R.string.setting_auto, prefs.getString("auto_enable", "0")));
 
         // Handle screen delay
         //Preference pref_screen_delay = screen.findPreference("screen_delay");
@@ -488,8 +488,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             } else
                 ServiceSinkhole.reload("changed " + name, this);
 
-        } else if ("auto_enable".equals(name))
-            getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_auto, prefs.getString(name, "0")));
+        } //else if ("auto_enable".equals(name))
+            //getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_auto, prefs.getString(name, "0")));
 
         //else if ("screen_delay".equals(name))
             //getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_delay, prefs.getString(name, "0")));
