@@ -471,8 +471,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             prefs.edit().remove(name).apply();
 
         // Dependencies
-        if ("whitelist_wifi".equals(name) ||
-                "screen_wifi".equals(name))
+        if ("whitelist_wifi".equals(name) /*||
+                "screen_wifi".equals(name)*/)
             ServiceSinkhole.reload("changed " + name, this);
 
         else if ("whitelist_other".equals(name) /*||
@@ -1003,9 +1003,9 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         xmlExport(getSharedPreferences("other", Context.MODE_PRIVATE), serializer);
         serializer.endTag(null, "mobile");
 
-        serializer.startTag(null, "screen_wifi");
+        /*serializer.startTag(null, "screen_wifi");
         xmlExport(getSharedPreferences("screen_wifi", Context.MODE_PRIVATE), serializer);
-        serializer.endTag(null, "screen_wifi");
+        serializer.endTag(null, "screen_wifi");*/
 
         /*serializer.startTag(null, "screen_other");
         xmlExport(getSharedPreferences("screen_other", Context.MODE_PRIVATE), serializer);
@@ -1151,7 +1151,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         xmlImport(handler.wifi, getSharedPreferences("wifi", Context.MODE_PRIVATE));
         xmlImport(handler.mobile, getSharedPreferences("other", Context.MODE_PRIVATE));
         xmlImport(handler.unused, getSharedPreferences("unused", Context.MODE_PRIVATE));
-        xmlImport(handler.screen_wifi, getSharedPreferences("screen_wifi", Context.MODE_PRIVATE));
+        //xmlImport(handler.screen_wifi, getSharedPreferences("screen_wifi", Context.MODE_PRIVATE));
         //xmlImport(handler.screen_other, getSharedPreferences("screen_other", Context.MODE_PRIVATE));
         xmlImport(handler.roaming, getSharedPreferences("roaming", Context.MODE_PRIVATE));
         xmlImport(handler.apply, getSharedPreferences("apply", Context.MODE_PRIVATE));
@@ -1198,7 +1198,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         public Map<String, Object> wifi = new HashMap<>();
         public Map<String, Object> mobile = new HashMap<>();
         public Map<String, Object> unused = new HashMap<>();
-        public Map<String, Object> screen_wifi = new HashMap<>();
+        //public Map<String, Object> screen_wifi = new HashMap<>();
         //public Map<String, Object> screen_other = new HashMap<>();
         public Map<String, Object> roaming = new HashMap<>();
         public Map<String, Object> apply = new HashMap<>();
@@ -1226,8 +1226,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
             else if (qName.equals("unused"))
                 current = unused;
 
-            else if (qName.equals("screen_wifi"))
-                current = screen_wifi;
+            /*else if (qName.equals("screen_wifi"))
+                current = screen_wifi;*/
 
             /*else if (qName.equals("screen_other"))
                 current = screen_other;*/

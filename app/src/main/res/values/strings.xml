@@ -52,7 +52,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="setting_defaults">Defaults</string>
     <string name="setting_whitelist_wifi">Block Wi-Fi</string>
     <string name="setting_whitelist_other">Block mobile</string>
-    <string name="setting_screen_wifi">Allow Wi-Fi when screen on</string>
+    <!--<string name="setting_screen_wifi">Allow Wi-Fi when screen on</string>-->
     <!--<string name="setting_screen_other">Allow mobile when screen on</string>-->
     <!--<string name="setting_whitelist_roaming">Block roaming</string>-->
 
