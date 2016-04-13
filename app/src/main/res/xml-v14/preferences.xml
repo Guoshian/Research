@@ -28,11 +28,11 @@
     <PreferenceCategory
         android:key="category_options"
         android:title="@string/setting_options">
-        <ListPreference
+        <!--<ListPreference
             android:defaultValue="teal"
             android:entries="@array/themeNames"
             android:entryValues="@array/themeValues"
-            android:key="theme" />
+            android:key="theme" />-->
         <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="dark_theme"

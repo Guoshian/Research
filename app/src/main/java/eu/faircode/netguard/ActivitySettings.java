@@ -140,15 +140,15 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         //pref_screen_delay.setTitle(getString(R.string.setting_delay, prefs.getString("screen_delay", "0")));
 
         // Handle theme
-        Preference pref_screen_theme = screen.findPreference("theme");
-        String theme = prefs.getString("theme", "teal");
-        String[] themeNames = getResources().getStringArray(R.array.themeNames);
-        String[] themeValues = getResources().getStringArray(R.array.themeValues);
-        for (int i = 0; i < themeNames.length; i++)
-            if (theme.equals(themeValues[i])) {
-                pref_screen_theme.setTitle(getString(R.string.setting_theme, themeNames[i]));
-                break;
-            }
+        //Preference pref_screen_theme = screen.findPreference("theme");
+        //String theme = prefs.getString("theme", "teal");
+        //String[] themeNames = getResources().getStringArray(R.array.themeNames);
+        //String[] themeValues = getResources().getStringArray(R.array.themeValues);
+        //for (int i = 0; i < themeNames.length; i++)
+            //if (theme.equals(themeValues[i])) {
+                //pref_screen_theme.setTitle(getString(R.string.setting_theme, themeNames[i]));
+               // break;
+            //}
 
         // Wi-Fi home
         MultiSelectListPreference pref_wifi_homes = (MultiSelectListPreference) screen.findPreference("wifi_homes");
