@@ -494,8 +494,8 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         //else if ("screen_delay".equals(name))
             //getPreferenceScreen().findPreference(name).setTitle(getString(R.string.setting_delay, prefs.getString(name, "0")));
 
-        else if ("theme".equals(name) || "dark_theme".equals(name))
-            recreate();
+        //else if ("theme".equals(name) || "dark_theme".equals(name))
+            //recreate();
 
         else if ("tethering".equals(name))
             ServiceSinkhole.reload("changed " + name, this);

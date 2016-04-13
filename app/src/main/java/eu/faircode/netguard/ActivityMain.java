@@ -522,8 +522,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             invalidateOptionsMenu();
             updateApplicationList(null);
 
-        } else if ("theme".equals(name) || "dark_theme".equals(name))
-            recreate();
+        } /*else if ("theme".equals(name) || "dark_theme".equals(name))
+            recreate();*/
     }
 
     private DatabaseHelper.AccessChangedListener accessChangedListener = new DatabaseHelper.AccessChangedListener() {
