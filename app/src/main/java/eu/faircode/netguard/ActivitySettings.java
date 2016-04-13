@@ -254,24 +254,24 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
         });*/
 
         // Hosts file settings
-        Preference pref_block_domains = screen.findPreference("use_hosts");
+        //Preference pref_block_domains = screen.findPreference("use_hosts");
         //Preference pref_hosts_import = screen.findPreference("hosts_import");
         //EditTextPreference pref_hosts_url = (EditTextPreference) screen.findPreference("hosts_url");
         //final Preference pref_hosts_download = screen.findPreference("hosts_download");
 
-        if (Util.isPlayStoreInstall(this)) {
-            cat_options.removePreference(screen.findPreference("update_check"));
-            cat_advanced.removePreference(pref_block_domains);
-            cat_advanced.removePreference(pref_forwarding);
+        //if (Util.isPlayStoreInstall(this)) {
+           // cat_options.removePreference(screen.findPreference("update_check"));
+           // cat_advanced.removePreference(pref_block_domains);
+           // cat_advanced.removePreference(pref_forwarding);
             //cat_backup.removePreference(pref_hosts_import);
             //cat_backup.removePreference(pref_hosts_url);
             //cat_backup.removePreference(pref_hosts_download);
 
-        } else {
-            pref_block_domains.setEnabled(new File(getFilesDir(), "hosts.txt").exists());
+       // } else {
+        //    pref_block_domains.setEnabled(new File(getFilesDir(), "hosts.txt").exists());
 
-            String last_import = prefs.getString("hosts_last_import", null);
-            String last_download = prefs.getString("hosts_last_download", null);
+        //    String last_import = prefs.getString("hosts_last_import", null);
+        //    String last_download = prefs.getString("hosts_last_download", null);
             //if (last_import != null)
                 //pref_hosts_import.setSummary(getString(R.string.msg_import_last, last_import));
             /*if (last_download != null)
@@ -337,7 +337,7 @@ public class ActivitySettings extends AppCompatActivity implements SharedPrefere
                     return true;
                 }
             });*/
-        }
+        //}
 
         // Development
         Preference pref_show_resolved = screen.findPreference("show_resolved");
